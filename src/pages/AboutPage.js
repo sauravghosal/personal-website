@@ -6,7 +6,11 @@ import Content from "../components/Content";
 function AboutPage(props) {
   return (
     <Container>
-      <Hero title={props.title} subtitle={props.subtitle} text={props.text} />
+      <Hero
+        title={props.about.title}
+        subtitle={props.about.subtitle}
+        text={props.about.text}
+      />
       <Content>
         <p>
           Hello! My name is Saurav Ghosal, and I'm a second year student

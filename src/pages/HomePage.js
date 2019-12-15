@@ -1,13 +1,17 @@
 import React from "react";
 import Container from "react-bootstrap/Container";
 import Hero from "../components/Hero";
-import Carousel from "../components/Carousel";
+import CarouselComponent from "../components/CarouselComponent";
 
 function HomePage(props) {
   return (
     <Container>
-      <Hero title={props.title} subtitle={props.subtitle} text={props.text} />
-      <Carousel />
+      <Hero
+        title={props.home.title}
+        subtitle={props.home.subtitle}
+        text={props.home.text}
+      />
+      <CarouselComponent />
     </Container>
   );
 }

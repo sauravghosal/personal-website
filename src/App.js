@@ -9,32 +9,30 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Footer from "./components/Footer";
 
 function App() {
-  const pages = [
-    {
-      home: {
-        title: "Saurav Ghosal",
-        body: "CS @ Georgia Tech",
-        subtext: "Personal Website"
-      },
-      about: {
-        title: "Get to Know Me!",
-        subtext: "Personal Website"
-      }
+  const pages = {
+    home: {
+      title: "Saurav Ghosal",
+      subtitle: "CS @ Georgia Tech",
+      text: "Here's my personal website"
+    },
+    about: {
+      title: "Get to Know Me!",
+      subtext: "Personal Website"
     }
-  ];
+  };
 
   return (
     <BrowserRouter>
       <Header />
       <Switch>
         <Route path="/about">
-          <AboutPage />
+          <AboutPage about={pages.about} />
         </Route>
         <Route path="/contact">
           <ContactPage />
         </Route>
         <Route path="/">
-          <HomePage title={"Saurav Ghosal"} />
+          <HomePage home={pages.home} />
         </Route>
       </Switch>
       <Footer />
