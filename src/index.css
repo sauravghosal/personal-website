@@ -12,6 +12,19 @@ code {
     monospace;
 }
 
+.carousel-caption {
+  top: 57%;
+  transform: translateY(-50%);
+  bottom: initial;
+}
+
+.slide-img {
+  background-image: linear-gradient(
+    white,
+    gray
+  ); /* Standard syntax (must be last) */
+}
+
 .avatar-img {
   border-radius: 50%;
   height: 150px;

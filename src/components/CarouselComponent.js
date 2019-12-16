@@ -25,12 +25,6 @@ const CarouselComponent = props => {
       description: "An Android app to keep track of items in your fridge!",
       link: "https://github.com/funkyfridge",
       img: FunkyFridge
-    },
-    {
-      name: "Funky Fridge",
-      description: "An Android app to keep track of items in your fridge!",
-      link: "https://github.com/funkyfridge",
-      img: "https://i.imgur.com/ZXBtVw7.jpg"
     }
   ];
 
@@ -40,9 +34,9 @@ const CarouselComponent = props => {
         return (
           <Carousel.Item>
             <img className="d-block w-100" src={slide.img} alt="slide" />
-            <Carousel.Caption>
-              <h3>{slide.name}</h3>
-              <p>{slide.description}</p>
+            <Carousel.Caption className="carousel-caption">
+              <h3 style={{ fontSize: "4.5vw" }}>{slide.name}</h3>
+              <p style={{ fontSize: "1.5vw" }}>{slide.description}</p>
             </Carousel.Caption>
           </Carousel.Item>
         );
