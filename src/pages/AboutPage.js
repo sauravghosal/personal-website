@@ -5,7 +5,7 @@ import Content from "../components/Content";
 
 function AboutPage(props) {
   return (
-    <Container>
+    <Container fluid>
       <Hero
         title={props.about.title}
         subtitle={props.about.subtitle}

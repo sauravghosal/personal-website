@@ -4,12 +4,7 @@ import React from "react";
 import Link from "react-router-dom/Link";
 
 const Header = () => (
-  <Navbar
-    variant="light"
-    className="border-bottom"
-    bg="transparent"
-    expand="lg"
-  >
+  <Navbar className="border-bottom" bg="transparent" expand="lg">
     <Navbar.Brand href="/">Saurav Ghosal</Navbar.Brand>
     <Navbar.Toggle aria-controls="navbar-toggle" />
     <Navbar.Collapse id="navbar-toggle">

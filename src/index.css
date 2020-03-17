@@ -1,8 +1,7 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Roboto", "Oxygen", "Ubuntu",
+    "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -12,30 +11,123 @@ code {
     monospace;
 }
 
-.carousel-caption {
-  top: 57%;
-  transform: translateY(-50%);
-  bottom: initial;
-}
-
-.slide-img {
-  background-image: linear-gradient(
-    white,
-    gray
-  ); /* Standard syntax (must be last) */
-}
-
+/* Header Styling */
 .avatar-img {
   border-radius: 50%;
-  height: 150px;
+  height: 200px;
+  display: block;
 }
 
-.success-msg {
-  color: #57a773;
-  padding: 10px 15px;
+/* Button Styling */
+.btn-primary,
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary:visited {
+  background-color: #111b47 !important;
 }
 
-.err-msg {
-  color: #ee6352;
-  padding: 10px 15px;
+/* Text Colors */
+p {
+  color: #505f98;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #111b47;
+}
+
+/* Jumbotron Styling */
+.jumbotron-content {
+  display: flex;
+}
+
+.jumbotron-img {
+  flex: 0 0 50%;
+  display: flex;
+  justify-content: flex-end;
+}
+/* Footer Styling */
+.footer-text {
+  display: flex;
+  justify-content: center;
+  padding-top: 5vh;
+}
+
+.footer-lower {
+  display: flex;
+  align-items: center;
+  padding-bottom: 2vh;
+}
+
+/* Links in Footer */
+.ftr-link {
+  color: #929ecc !important;
+  padding-left: 1vw;
+  padding-right: 1vw;
+}
+
+.ftr-link:hover {
+  text-decoration: none;
+  opacity: 0.7;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: row;
+}
+
+.footer-icons {
+  margin-left: auto;
+  margin-right: 0;
+  flex: 0 0 50%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* Social Media Icons */
+.fa {
+  padding: 5px;
+  text-align: center;
+  text-decoration: none;
+  color: #b0b8bc;
+}
+
+.fa:hover {
+  text-decoration: none;
+  opacity: 0.7;
+}
+
+/* Home Content (Cards) */
+.home-content {
+  text-align: center;
+}
+
+.card-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+/* Card Styling */
+.card {
+  /* Add shadows to create the "card" effect */
+  background-color: black;
+  width: 300px;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s;
+}
+
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.card-tags {
+  justify-self: end;
 }
