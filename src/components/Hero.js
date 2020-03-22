@@ -7,10 +7,7 @@ function Hero() {
   return (
     <JumboTron style={{ backgroundColor: "#E7ECFF" }} fluid>
       <div className="jumbotron-content">
-        <div
-          className="jumbotron-text"
-          style={{ width: "40%", paddingLeft: "5vw" }}
-        >
+        <div className="jumbotron-text">
           <h1>Hey there!</h1>
           <p>
             My name is <strong>Saurav Ghosal</strong>, and I’m a 2nd year CS
@@ -20,7 +17,7 @@ function Hero() {
           </p>
           <Button onClick={() => console.log("clicked")}>Let's Chat</Button>
         </div>
-        <div className="jumbotron-img" style={{ alignContent: "right" }}>
+        <div className="jumbotron-img">
           <img
             src={require("../assets/images/avatar.png")}
             className="avatar-img"

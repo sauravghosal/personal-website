@@ -49,11 +49,37 @@ h6 {
   display: flex;
 }
 
+.jumbotron-text {
+  width: 40%;
+  padding-left: 5vw;
+  padding-right: 5vw;
+}
+
 .jumbotron-img {
   flex: 0 0 50%;
   display: flex;
   justify-content: flex-end;
 }
+
+/* Styling for Smaller Screens */
+@media screen and (max-width: 600px) {
+  .jumbotron-content {
+    flex-flow: column-reverse wrap;
+    align-items: center;
+  }
+  .jumbotron-img {
+    width: 50vw;
+    height: 50vw;
+  }
+  .avatar-img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+  .jumbotron-text {
+    width: 100%;
+  }
+}
+
 /* Footer Styling */
 .footer-text {
   display: flex;
@@ -130,6 +156,7 @@ h6 {
 
 /* Card Styling */
 .card {
+  text-align: center;
   width: 300px;
   margin: 15px;
   transition: box-shadow 0.3s ease-in-out;
@@ -160,7 +187,7 @@ h6 {
 
 .card__media {
   position: relative;
-  width: 300px;
+  width: 100%;
 }
 
 .card__content {

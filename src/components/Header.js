@@ -6,7 +6,7 @@ const Link = Scroll.Link;
 
 const Header = () => (
   <Navbar className="border-bottom" expand="lg">
-    <Navbar.Brand href="/">Saurav Ghosal </Navbar.Brand>
+    <Navbar.Brand>Saurav Ghosal </Navbar.Brand>
     <Navbar.Toggle aria-controls="navbar-toggle" />
     <Navbar.Collapse id="navbar-toggle">
       <Nav className="ml-auto">
