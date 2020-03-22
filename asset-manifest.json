@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/full-personal-website/static/css/main.247d7cb1.chunk.css",
+    "main.js": "/full-personal-website/static/js/main.652a061f.chunk.js",
+    "main.js.map": "/full-personal-website/static/js/main.652a061f.chunk.js.map",
+    "runtime-main.js": "/full-personal-website/static/js/runtime-main.c27e0bc1.js",
+    "runtime-main.js.map": "/full-personal-website/static/js/runtime-main.c27e0bc1.js.map",
+    "static/css/2.de424728.chunk.css": "/full-personal-website/static/css/2.de424728.chunk.css",
+    "static/js/2.b76b0ab6.chunk.js": "/full-personal-website/static/js/2.b76b0ab6.chunk.js",
+    "static/js/2.b76b0ab6.chunk.js.map": "/full-personal-website/static/js/2.b76b0ab6.chunk.js.map",
+    "index.html": "/full-personal-website/index.html",
+    "precache-manifest.7460af5d464f3234f8c414779a835936.js": "/full-personal-website/precache-manifest.7460af5d464f3234f8c414779a835936.js",
+    "service-worker.js": "/full-personal-website/service-worker.js",
+    "static/css/2.de424728.chunk.css.map": "/full-personal-website/static/css/2.de424728.chunk.css.map",
+    "static/css/main.247d7cb1.chunk.css.map": "/full-personal-website/static/css/main.247d7cb1.chunk.css.map",
+    "static/js/2.b76b0ab6.chunk.js.LICENSE.txt": "/full-personal-website/static/js/2.b76b0ab6.chunk.js.LICENSE.txt",
+    "static/media/avatar.png": "/full-personal-website/static/media/avatar.b466e056.png",
+    "static/media/biary-img.png": "/full-personal-website/static/media/biary-img.03c37427.png",
+    "static/media/funky-fridge-img.png": "/full-personal-website/static/media/funky-fridge-img.98452aff.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.c27e0bc1.js",
+    "static/css/2.de424728.chunk.css",
+    "static/js/2.b76b0ab6.chunk.js",
+    "static/css/main.247d7cb1.chunk.css",
+    "static/js/main.652a061f.chunk.js"
+  ]
+}
