@@ -11,7 +11,7 @@ function Hero() {
           className="jumbotron-text"
           style={{ width: "40%", paddingLeft: "5vw" }}
         >
-          <h1>Hey there!&#128075;</h1>
+          <h1>Hey there!</h1>
           <p>
             My name is <strong>Saurav Ghosal</strong>, and I’m a 2nd year CS
             student at <strong>Georgia Tech</strong> with threads in
@@ -22,7 +22,7 @@ function Hero() {
         </div>
         <div className="jumbotron-img" style={{ alignContent: "right" }}>
           <img
-            src={require("../assets/images/avatar.JPG")}
+            src={require("../assets/images/avatar.png")}
             className="avatar-img"
             alt="avatar"
           />

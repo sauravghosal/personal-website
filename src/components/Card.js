@@ -1,31 +1,43 @@
 import React from "react";
-import styles from "./styles.scss";
 
-const card = props => {
+const Card = props => {
   return (
-    <div className={styles["card-content"]}>
-      <div className={styles["thumbnail"]}>
-        <img src={props.thumbnail} />
+    <a
+      href={props.link}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="card"
+      data-aos="fade-up"
+    >
+      <div className="card__media">
+        <img src={props.img} alt="project graphic" />
       </div>
-
-      <div className={styles["text"]}>
-        <div className={styles["title"]}>{props.name}</div>
-        <div className={styles["description"]}>{props.description}</div>
-        <div className="card">
-          <h3>{props.name}</h3>
-          <div className={styles["tags"]}>
-            {props.tags.map((tag, i) => {
-              return (
-                <span className={styles["tag"]}>
-                  {typeof tag === "function" ? tag() : tag}
-                </span>
-              );
-            })}
-          </div>
+      {props.attribution && (
+        <div className="card-attribution">
+          Icons made by{" "}
+          <a
+            href="https://www.flaticon.com/authors/freepik"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="Freepik"
+          >
+            Freepik
+          </a>
+        </div>
+      )}
+      <div className="card__content">
+        <header className="card__header">
+          <h2 class="card__title">{props.name}</h2>
+          <p>{props.content}</p>
+        </header>
+        <div className="card-tags">
+          {props.tags.map(tag => {
+            return <div className="tag">{tag}</div>;
+          })}
         </div>
       </div>
-    </div>
+    </a>
   );
 };
 
-export default card;
+export default Card;
