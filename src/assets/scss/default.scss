@@ -1,0 +1,261 @@
+$primary: #f65058ff;
+$secondary: #28334aff;
+$highlight: #fbdb6b;
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Roboto", "Oxygen", "Ubuntu",
+    "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Header Styling */
+.navbar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  background: $primary;
+  color: white;
+
+  ul {
+    list-style-type: none;
+    justify-self: flex-end;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  li {
+    text-decoration: none;
+    :hover {
+      cursor: pointer;
+      color: $highlight;
+    }
+  }
+
+  .logo {
+    justify-self: flex-start;
+  }
+}
+.avatar-img {
+  border-radius: 50%;
+  border: 2px solid white;
+  height: 200px;
+  display: block;
+}
+
+/* Button Styling */
+.btn-primary,
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary:visited {
+  background-color: $primary !important;
+}
+
+/* Text Colors */
+p {
+  color: $secondary;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: $primary;
+}
+
+/* Jumbotron Styling */
+.jumbotron-content {
+  display: flex;
+}
+
+.jumbotron-text {
+  width: 40%;
+  padding-left: 5vw;
+  padding-right: 5vw;
+}
+
+.jumbotron-img {
+  flex: 0 0 50%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* Styling for Smaller Screens */
+@media screen and (max-width: 600px) {
+  .jumbotron-content {
+    flex-flow: column-reverse wrap;
+    align-items: center;
+  }
+  .jumbotron-img {
+    width: 50vw;
+    height: 50vw;
+  }
+  .avatar-img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+  .jumbotron-text {
+    width: 100%;
+  }
+}
+
+/* Footer Styling */
+.footer-text {
+  display: flex;
+  justify-content: center;
+  padding-top: 5vh;
+}
+
+.footer-lower {
+  display: flex;
+  align-items: center;
+  padding-bottom: 2vh;
+}
+
+/* Links in Footer */
+.ftr-link {
+  color: $secondary !important;
+  padding-left: 1vw;
+  padding-right: 1vw;
+}
+
+.ftr-link:hover {
+  text-decoration: none;
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: row;
+}
+
+.footer-icons {
+  margin-left: auto;
+  margin-right: 0;
+  flex: 0 0 50%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* Social Media Icons */
+.fa {
+  padding: 5px;
+  text-align: center;
+  text-decoration: none;
+  color: #b0b8bc;
+}
+
+.fa:hover {
+  text-decoration: none;
+  opacity: 0.7;
+}
+
+.page-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Page Content */
+.content {
+  margin: 50px;
+}
+.content > h1 {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.card-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+/* Card Styling */
+.card {
+  text-align: center;
+  width: 300px;
+  margin: 15px;
+  transition: box-shadow 0.3s ease-in-out;
+  box-shadow: 0 1px 2px 0 #111b47;
+}
+
+/* Add box shadow to entire card on hover */
+.card:hover {
+  box-shadow: 0 1px 10px 0 $primary;
+  text-decoration: none;
+}
+
+/* Creates variation of card component in a wide format */
+.card.card--wide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 768px;
+}
+
+/* Adds transparent overlay over image. */
+
+.card__media img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.card__media {
+  position: relative;
+  width: 100%;
+}
+
+.card__content {
+  padding: 40px 25px;
+}
+
+/* Changes padding on wide card */
+.card--wide .card__content {
+  padding: 20px 20px;
+  width: calc(100% - 300px);
+}
+
+/* Removes max-height on wide card */
+.card--wide .card__excerpt {
+  max-height: none;
+}
+
+.card__title {
+  margin: 0 0 10px;
+  font-size: 20px;
+}
+
+.card__meta {
+  color: #ccc;
+  font-size: 14px;
+}
+
+.card-attribution {
+  font-size: 10px;
+  font-weight: 500;
+  text-decoration: none;
+  color: #b0b8bc;
+}
+
+.Freepik:hover {
+  text-decoration: none;
+}
+
+/* Tag Styling */
+.tag {
+  display: inline-block;
+  background-color: #111b47;
+  color: white;
+  margin: 1vh;
+  padding: 5px 10px 5px 10px;
+  border-radius: 25px;
+  font-size: 12px;
+  font-weight: 500;
+}

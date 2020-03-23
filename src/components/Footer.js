@@ -1,6 +1,5 @@
 import React from "react";
 import Container from "react-bootstrap/Container";
-import "../App.css";
 import Scroll from "react-scroll";
 const Link = Scroll.Link;
 

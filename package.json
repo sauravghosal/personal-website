@@ -30,7 +30,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "gulp": "gulp"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -49,6 +50,13 @@
   },
   "devDependencies": {
     "gh-pages": "^2.2.0",
+    "gulp": "^4.0.2",
+    "gulp-change": "^1.0.2",
+    "gulp-changed": "^4.0.2",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-uglify": "^3.0.2",
     "node-sass": "^4.13.1",
     "react-social-icons": "^4.1.0",
     "sass-loader": "^8.0.2"
