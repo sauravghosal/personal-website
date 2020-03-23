@@ -1,6 +1,8 @@
-$primary: #f65058ff;
-$secondary: #28334aff;
-$highlight: #fbdb6b;
+$primary: #fbdb6b;
+$secondary: #f65058ff;
+$text: white;
+
+$smallLayout: 950px;
 
 body {
   margin: 0;
@@ -8,16 +10,22 @@ body {
     "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
 }
 
 /* Header Styling */
 .navbar {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
   width: 100%;
-  background: $primary;
-  color: white;
+  height: 8vh;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: baseline;
+  background: $secondary;
+  color: $text;
 
   ul {
     list-style-type: none;
@@ -28,30 +36,30 @@ body {
   }
   li {
     text-decoration: none;
-    :hover {
+    &:hover {
       cursor: pointer;
-      color: $highlight;
+      color: $primary;
     }
   }
 
   .logo {
     justify-self: flex-start;
+    height: 30px;
+    width: 30px;
+    img {
+      max-width: 100%;
+      max-height: 100%;
+    }
   }
 }
-.avatar-img {
-  border-radius: 50%;
-  border: 2px solid white;
-  height: 200px;
-  display: block;
-}
 
-/* Button Styling */
-.btn-primary,
-.btn-primary:hover,
-.btn-primary:active,
-.btn-primary:visited {
-  background-color: $primary !important;
-}
+// /* Button Styling */
+// .btn-secon$secondary,
+// .btn-secon$secondary:hover,
+// .btn-secon$secondary:active,
+// .btn-secon$secondary:visited {
+//   background-color: $secondary !important;
+// }
 
 /* Text Colors */
 p {
@@ -63,43 +71,212 @@ h3,
 h4,
 h5,
 h6 {
-  color: $primary;
+  color: $secondary;
+}
+
+.avatar-img {
+  border-radius: 50%;
+  border: 2px solid white;
+  height: 300px;
+  display: block;
+}
+
+.page {
+  min-height: 100vh;
+  display: flex;
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  // figure out how to put this at bottom without flexbox
+  .arrow {
+    align-self: center;
+    transition: all 0.2s ease-in-out;
+    height: 20px;
+    width: 20px;
+    margin-bottom: 0;
+
+    &:hover {
+      cursor: pointer;
+      transform: scale(1.5);
+    }
+    i {
+      border: solid black;
+      border-width: 0 3px 3px 0;
+      display: inline-block;
+      padding: 3px;
+
+      &.down {
+        -webkit-transform: rotate(45deg);
+      }
+    }
+  }
 }
 
 /* Jumbotron Styling */
-.jumbotron-content {
-  display: flex;
-}
+.page.hero {
+  background-color: $primary;
 
-.jumbotron-text {
-  width: 40%;
-  padding-left: 5vw;
-  padding-right: 5vw;
-}
-
-.jumbotron-img {
-  flex: 0 0 50%;
-  display: flex;
-  justify-content: flex-end;
-}
-
-/* Styling for Smaller Screens */
-@media screen and (max-width: 600px) {
   .jumbotron-content {
-    flex-flow: column-reverse wrap;
+    display: flex;
+    flex-flow: row wrap;
+    height: 100%;
+    width: 100%;
     align-items: center;
+    justify-content: space-around;
+
+    h1 {
+      span {
+        font-weight: 1000;
+      }
+    }
+
+    .jumbotron-text {
+      padding-left: 5vw;
+      padding-right: 5vw;
+
+      ul {
+        padding: 0;
+        font-size: 2em;
+
+        li {
+          display: inline-block;
+          width: 2em;
+          color: $secondary;
+
+          &.grow {
+            transition: all 0.2s ease-in-out;
+
+            &:hover {
+              transform: scale(1.5);
+            }
+          }
+        }
+      }
+      .jumbotron-img {
+        padding-left: 5vw;
+        padding-right: 5vw;
+        text-align: center;
+      }
+    }
+
+    /* Styling for Smaller Screens */
+    @media screen and (max-width: $smallLayout) {
+      display: flex;
+      flex-flow: column-reverse wrap;
+      align-items: center;
+      justify-content: center;
+
+      .avatar-img {
+        max-width: 50vw;
+        max-height: 50vw;
+      }
+      .jumbotron-text {
+        text-align: center;
+        width: 100%;
+      }
+    }
   }
-  .jumbotron-img {
-    width: 50vw;
-    height: 50vw;
+}
+
+.page.project {
+  align-items: center;
+  height: auto;
+
+  .card-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
   }
-  .avatar-img {
+
+  /* Card Styling */
+  .card {
+    text-align: center;
+    width: 300px;
+    margin: 15px;
+    transition: box-shadow 0.3s ease-in-out;
+    box-shadow: 0 1px 2px 0 #111b47;
+  }
+
+  /* Add box shadow to entire card on hover */
+  .card:hover {
+    box-shadow: 0 1px 10px 0 $secondary;
+    text-decoration: none;
+  }
+
+  /* Creates variation of card component in a wide format */
+  .card.card--wide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 768px;
+  }
+
+  /* Adds transparent overlay over image. */
+
+  .card__media img {
+    display: block;
     max-width: 100%;
-    max-height: 100%;
+    height: auto;
   }
-  .jumbotron-text {
+
+  .card__media {
+    position: relative;
     width: 100%;
   }
+
+  .card__content {
+    padding: 40px 25px;
+  }
+
+  /* Changes padding on wide card */
+  .card--wide .card__content {
+    padding: 20px 20px;
+    width: calc(100% - 300px);
+  }
+
+  /* Removes max-height on wide card */
+  .card--wide .card__excerpt {
+    max-height: none;
+  }
+
+  .card__title {
+    margin: 0 0 10px;
+    font-size: 20px;
+  }
+
+  .card__meta {
+    color: #ccc;
+    font-size: 14px;
+  }
+
+  .card-attribution {
+    font-size: 10px;
+    font-weight: 500;
+    text-decoration: none;
+    color: #b0b8bc;
+  }
+
+  .Freepik:hover {
+    text-decoration: none;
+  }
+
+  /* Tag Styling */
+  .tag {
+    display: inline-block;
+    background-color: #111b47;
+    color: white;
+    margin: 1vh;
+    padding: 5px 10px 5px 10px;
+    border-radius: 25px;
+    font-size: 12px;
+    font-weight: 500;
+  }
+}
+
+.footer {
+  background-color: $primary;
 }
 
 /* Footer Styling */
@@ -160,102 +337,24 @@ h6 {
   justify-content: space-between;
 }
 
-/* Page Content */
-.content {
-  margin: 50px;
-}
-.content > h1 {
-  text-align: center;
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
+/* About Page */
+.page.about {
+  background-color: $secondary;
 
-.card-container {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-}
+  .content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    h1 {
+      justify-self: flex-start;
+      text-align: center;
+      margin-top: 50px;
+    }
 
-/* Card Styling */
-.card {
-  text-align: center;
-  width: 300px;
-  margin: 15px;
-  transition: box-shadow 0.3s ease-in-out;
-  box-shadow: 0 1px 2px 0 #111b47;
-}
-
-/* Add box shadow to entire card on hover */
-.card:hover {
-  box-shadow: 0 1px 10px 0 $primary;
-  text-decoration: none;
-}
-
-/* Creates variation of card component in a wide format */
-.card.card--wide {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 768px;
-}
-
-/* Adds transparent overlay over image. */
-
-.card__media img {
-  display: block;
-  max-width: 100%;
-  height: auto;
-}
-
-.card__media {
-  position: relative;
-  width: 100%;
-}
-
-.card__content {
-  padding: 40px 25px;
-}
-
-/* Changes padding on wide card */
-.card--wide .card__content {
-  padding: 20px 20px;
-  width: calc(100% - 300px);
-}
-
-/* Removes max-height on wide card */
-.card--wide .card__excerpt {
-  max-height: none;
-}
-
-.card__title {
-  margin: 0 0 10px;
-  font-size: 20px;
-}
-
-.card__meta {
-  color: #ccc;
-  font-size: 14px;
-}
-
-.card-attribution {
-  font-size: 10px;
-  font-weight: 500;
-  text-decoration: none;
-  color: #b0b8bc;
-}
-
-.Freepik:hover {
-  text-decoration: none;
-}
-
-/* Tag Styling */
-.tag {
-  display: inline-block;
-  background-color: #111b47;
-  color: white;
-  margin: 1vh;
-  padding: 5px 10px 5px 10px;
-  border-radius: 25px;
-  font-size: 12px;
-  font-weight: 500;
+    p {
+      color: white;
+    }
+  }
 }

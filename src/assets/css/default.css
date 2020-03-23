@@ -2,14 +2,20 @@ body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale; }
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth; }
 
 /* Header Styling */
 .navbar {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
   width: 100%;
+  height: 8vh;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: baseline;
   background: #f65058ff;
   color: white; }
   .navbar ul {
@@ -20,28 +26,20 @@ body {
     justify-content: space-between; }
   .navbar li {
     text-decoration: none; }
-    .navbar li :hover {
+    .navbar li:hover {
       cursor: pointer;
       color: #fbdb6b; }
   .navbar .logo {
-    justify-self: flex-start; }
-
-.avatar-img {
-  border-radius: 50%;
-  border: 2px solid white;
-  height: 200px;
-  display: block; }
-
-/* Button Styling */
-.btn-primary,
-.btn-primary:hover,
-.btn-primary:active,
-.btn-primary:visited {
-  background-color: #f65058ff !important; }
+    justify-self: flex-start;
+    height: 30px;
+    width: 30px; }
+    .navbar .logo img {
+      max-width: 100%;
+      max-height: 100%; }
 
 /* Text Colors */
 p {
-  color: #28334aff; }
+  color: #f65058ff; }
 
 h1,
 h2,
@@ -51,33 +49,147 @@ h5,
 h6 {
   color: #f65058ff; }
 
-/* Jumbotron Styling */
-.jumbotron-content {
-  display: flex; }
+.avatar-img {
+  border-radius: 50%;
+  border: 2px solid white;
+  height: 300px;
+  display: block; }
 
-.jumbotron-text {
-  width: 40%;
-  padding-left: 5vw;
-  padding-right: 5vw; }
-
-.jumbotron-img {
-  flex: 0 0 50%;
+.page {
+  min-height: 100vh;
   display: flex;
-  justify-content: flex-end; }
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
+  .page .arrow {
+    align-self: center;
+    transition: all 0.2s ease-in-out;
+    height: 20px;
+    width: 20px;
+    margin-bottom: 0; }
+    .page .arrow:hover {
+      cursor: pointer;
+      transform: scale(1.5); }
+    .page .arrow i {
+      border: solid black;
+      border-width: 0 3px 3px 0;
+      display: inline-block;
+      padding: 3px; }
+      .page .arrow i.down {
+        -webkit-transform: rotate(45deg); }
 
-/* Styling for Smaller Screens */
-@media screen and (max-width: 600px) {
-  .jumbotron-content {
-    flex-flow: column-reverse wrap;
-    align-items: center; }
-  .jumbotron-img {
-    width: 50vw;
-    height: 50vw; }
-  .avatar-img {
+/* Jumbotron Styling */
+.page.hero {
+  background-color: #fbdb6b; }
+  .page.hero .jumbotron-content {
+    display: flex;
+    flex-flow: row wrap;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    justify-content: space-around;
+    /* Styling for Smaller Screens */ }
+    .page.hero .jumbotron-content h1 span {
+      font-weight: 1000; }
+    .page.hero .jumbotron-content .jumbotron-text {
+      padding-left: 5vw;
+      padding-right: 5vw; }
+      .page.hero .jumbotron-content .jumbotron-text ul {
+        padding: 0;
+        font-size: 2em; }
+        .page.hero .jumbotron-content .jumbotron-text ul li {
+          display: inline-block;
+          width: 2em;
+          color: #f65058ff; }
+          .page.hero .jumbotron-content .jumbotron-text ul li.grow {
+            transition: all 0.2s ease-in-out; }
+            .page.hero .jumbotron-content .jumbotron-text ul li.grow:hover {
+              transform: scale(1.5); }
+      .page.hero .jumbotron-content .jumbotron-text .jumbotron-img {
+        padding-left: 5vw;
+        padding-right: 5vw;
+        text-align: center; }
+    @media screen and (max-width: 950px) {
+      .page.hero .jumbotron-content {
+        display: flex;
+        flex-flow: column-reverse wrap;
+        align-items: center;
+        justify-content: center; }
+        .page.hero .jumbotron-content .avatar-img {
+          max-width: 50vw;
+          max-height: 50vw; }
+        .page.hero .jumbotron-content .jumbotron-text {
+          text-align: center;
+          width: 100%; } }
+
+.page.project {
+  align-items: center;
+  height: auto;
+  /* Card Styling */
+  /* Add box shadow to entire card on hover */
+  /* Creates variation of card component in a wide format */
+  /* Adds transparent overlay over image. */
+  /* Changes padding on wide card */
+  /* Removes max-height on wide card */
+  /* Tag Styling */ }
+  .page.project .card-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center; }
+  .page.project .card {
+    text-align: center;
+    width: 300px;
+    margin: 15px;
+    transition: box-shadow 0.3s ease-in-out;
+    box-shadow: 0 1px 2px 0 #111b47; }
+  .page.project .card:hover {
+    box-shadow: 0 1px 10px 0 #f65058ff;
+    text-decoration: none; }
+  .page.project .card.card--wide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 768px; }
+  .page.project .card__media img {
+    display: block;
     max-width: 100%;
-    max-height: 100%; }
-  .jumbotron-text {
-    width: 100%; } }
+    height: auto; }
+  .page.project .card__media {
+    position: relative;
+    width: 100%; }
+  .page.project .card__content {
+    padding: 40px 25px; }
+  .page.project .card--wide .card__content {
+    padding: 20px 20px;
+    width: calc(100% - 300px); }
+  .page.project .card--wide .card__excerpt {
+    max-height: none; }
+  .page.project .card__title {
+    margin: 0 0 10px;
+    font-size: 20px; }
+  .page.project .card__meta {
+    color: #ccc;
+    font-size: 14px; }
+  .page.project .card-attribution {
+    font-size: 10px;
+    font-weight: 500;
+    text-decoration: none;
+    color: #b0b8bc; }
+  .page.project .Freepik:hover {
+    text-decoration: none; }
+  .page.project .tag {
+    display: inline-block;
+    background-color: #111b47;
+    color: white;
+    margin: 1vh;
+    padding: 5px 10px 5px 10px;
+    border-radius: 25px;
+    font-size: 12px;
+    font-weight: 500; }
+
+.footer {
+  background-color: #fbdb6b; }
 
 /* Footer Styling */
 .footer-text {
@@ -92,7 +204,7 @@ h6 {
 
 /* Links in Footer */
 .ftr-link {
-  color: #28334aff !important;
+  color: #f65058ff !important;
   padding-left: 1vw;
   padding-right: 1vw; }
 
@@ -128,86 +240,18 @@ h6 {
   flex-direction: column;
   justify-content: space-between; }
 
-/* Page Content */
-.content {
-  margin: 50px; }
-
-.content > h1 {
-  text-align: center;
-  margin-top: 20px;
-  margin-bottom: 20px; }
-
-.card-container {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center; }
-
-/* Card Styling */
-.card {
-  text-align: center;
-  width: 300px;
-  margin: 15px;
-  transition: box-shadow 0.3s ease-in-out;
-  box-shadow: 0 1px 2px 0 #111b47; }
-
-/* Add box shadow to entire card on hover */
-.card:hover {
-  box-shadow: 0 1px 10px 0 #f65058ff;
-  text-decoration: none; }
-
-/* Creates variation of card component in a wide format */
-.card.card--wide {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 768px; }
-
-/* Adds transparent overlay over image. */
-.card__media img {
-  display: block;
-  max-width: 100%;
-  height: auto; }
-
-.card__media {
-  position: relative;
-  width: 100%; }
-
-.card__content {
-  padding: 40px 25px; }
-
-/* Changes padding on wide card */
-.card--wide .card__content {
-  padding: 20px 20px;
-  width: calc(100% - 300px); }
-
-/* Removes max-height on wide card */
-.card--wide .card__excerpt {
-  max-height: none; }
-
-.card__title {
-  margin: 0 0 10px;
-  font-size: 20px; }
-
-.card__meta {
-  color: #ccc;
-  font-size: 14px; }
-
-.card-attribution {
-  font-size: 10px;
-  font-weight: 500;
-  text-decoration: none;
-  color: #b0b8bc; }
-
-.Freepik:hover {
-  text-decoration: none; }
-
-/* Tag Styling */
-.tag {
-  display: inline-block;
-  background-color: #111b47;
-  color: white;
-  margin: 1vh;
-  padding: 5px 10px 5px 10px;
-  border-radius: 25px;
-  font-size: 12px;
-  font-weight: 500; }
+/* About Page */
+.page.about {
+  background-color: #f65058ff; }
+  .page.about .content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
+    .page.about .content h1 {
+      justify-self: flex-start;
+      text-align: center;
+      margin-top: 50px; }
+    .page.about .content p {
+      color: white; }

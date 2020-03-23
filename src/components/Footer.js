@@ -5,7 +5,7 @@ const Link = Scroll.Link;
 
 function Footer() {
   return (
-    <footer className="mt-5" style={{ backgroundColor: "#E7ECFF" }}>
+    <footer className="mt-5 footer">
       <Container fluid={true}>
         <div className="footer-upper">
           <div className="footer-text">

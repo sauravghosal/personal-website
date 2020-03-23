@@ -1,15 +1,18 @@
 import React from "react";
 import Scroll from "react-scroll";
+import logo from "../assets/images/logo.png";
 const Link = Scroll.Link;
 
 const Header = () => (
   <header className="navbar">
-    <div className="logo">Saurav Ghosal</div>
+    <div className="logo">
+      <img src={logo} />
+    </div>
     <nav>
       <ul>
         <li>
           <Link
-            to="home"
+            to="hero"
             spy={true}
             smooth={true}
             duration={500}
@@ -17,6 +20,18 @@ const Header = () => (
             activeClass="active"
           >
             Home
+          </Link>
+        </li>
+        <li>
+          <Link
+            to="projects"
+            spy={true}
+            smooth={true}
+            duration={500}
+            className="nav-link"
+            activeClass="active"
+          >
+            Projects
           </Link>
         </li>
         <li>

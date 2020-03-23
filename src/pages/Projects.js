@@ -1,7 +1,9 @@
 import React from "react";
-import Card from "./Card";
+import Card from "../components/Card";
 import biary from "../assets/images/biary-img.png";
 import FunkyFridge from "../assets/images/funky-fridge-img.png";
+import Scroll from "react-scroll";
+const Link = Scroll.Link;
 
 const cards = [
   {
@@ -23,8 +25,8 @@ const cards = [
   }
 ];
 
-const Home = () => (
-  <div className="content">
+const Projects = () => (
+  <div className="page project">
     <h1>Projects</h1>
     <div className="card-container">
       {cards.map(card => {
@@ -40,7 +42,17 @@ const Home = () => (
         );
       })}
     </div>
+    <Link
+      to="about"
+      spy={true}
+      smooth={true}
+      duration={500}
+      activeClass="active"
+      className="arrow"
+    >
+      <i class="arrow down"></i>
+    </Link>
   </div>
 );
 
-export default Home;
+export default Projects;

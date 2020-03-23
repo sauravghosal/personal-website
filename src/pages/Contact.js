@@ -52,7 +52,7 @@ class Contact extends React.Component {
 
   render() {
     return (
-      <div className="content">
+      <div className="page content">
         <h1>Contact Me</h1>
         <Form onSubmit={this.handleSubmit}>
           <Form.Group>
