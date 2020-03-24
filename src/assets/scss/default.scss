@@ -2,7 +2,8 @@ $primary: #fbdb6b;
 $secondary: #f65058ff;
 $text: white;
 
-$smallLayout: 950px;
+$mediumLayout: 950px;
+$smallLayout: 450px;
 
 body {
   margin: 0;
@@ -23,33 +24,49 @@ body {
   height: 8vh;
   display: flex;
   flex-flow: row wrap;
-  align-items: baseline;
+  justify-content: space-between;
+  align-items: center;
   background: $secondary;
   color: $text;
 
   ul {
+    margin: 0;
+    padding: 0;
     list-style-type: none;
-    justify-self: flex-end;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
   }
   li {
+    display: list-item;
     text-decoration: none;
+
     &:hover {
       cursor: pointer;
       color: $primary;
     }
   }
+}
 
+.logo {
+  justify-self: flex-start;
+  height: 30px;
+  width: 30px;
+  img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+}
+/* Styling for Smaller Screens */
+@media screen and (max-width: $smallLayout) {
   .logo {
-    justify-self: flex-start;
-    height: 30px;
-    width: 30px;
-    img {
-      max-width: 100%;
-      max-height: 100%;
-    }
+    display: none;
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+    justify-content: center;
   }
 }
 
@@ -87,7 +104,11 @@ h6 {
   width: auto;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
+  padding-top: 10vh;
+  padding-bottom: 10vh;
+  padding-right: 10vw;
+  padding-left: 10vw;
 
   // figure out how to put this at bottom without flexbox
   .arrow {
@@ -95,7 +116,7 @@ h6 {
     transition: all 0.2s ease-in-out;
     height: 20px;
     width: 20px;
-    margin-bottom: 0;
+    margin-bottom: 20px;
 
     &:hover {
       cursor: pointer;
@@ -117,8 +138,11 @@ h6 {
 /* Jumbotron Styling */
 .page.hero {
   background-color: $primary;
+  padding-right: 0;
+  padding-left: 0;
 
   .jumbotron-content {
+    margin-top: 20vh;
     display: flex;
     flex-flow: row wrap;
     height: 100%;
@@ -133,14 +157,11 @@ h6 {
     }
 
     .jumbotron-text {
-      padding-left: 5vw;
-      padding-right: 5vw;
-
-      ul {
+      .hero-links {
         padding: 0;
         font-size: 2em;
 
-        li {
+        a {
           display: inline-block;
           width: 2em;
           color: $secondary;
@@ -154,15 +175,10 @@ h6 {
           }
         }
       }
-      .jumbotron-img {
-        padding-left: 5vw;
-        padding-right: 5vw;
-        text-align: center;
-      }
     }
 
     /* Styling for Smaller Screens */
-    @media screen and (max-width: $smallLayout) {
+    @media screen and (max-width: $mediumLayout) {
       display: flex;
       flex-flow: column-reverse wrap;
       align-items: center;
@@ -192,86 +208,61 @@ h6 {
 
   /* Card Styling */
   .card {
-    text-align: center;
     width: 300px;
-    margin: 15px;
-    transition: box-shadow 0.3s ease-in-out;
-    box-shadow: 0 1px 2px 0 #111b47;
-  }
+    margin: 20px;
+    border: black 2px;
+    background-color: #eee;
 
-  /* Add box shadow to entire card on hover */
-  .card:hover {
-    box-shadow: 0 1px 10px 0 $secondary;
-    text-decoration: none;
-  }
+    p {
+      display: block;
+      margin-block-start: 1em;
+      margin-block-end: 1em;
+      margin-inline-start: 0px;
+      margin-inline-end: 0px;
+      font-size: 14px;
+      padding: 25px;
+      padding-top: 0px;
+      text-align: left;
+      line-height: 24px;
+      color: black;
+    }
+    .image {
+      img {
+        width: 100%;
+      }
+    }
 
-  /* Creates variation of card component in a wide format */
-  .card.card--wide {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 768px;
-  }
+    @media screen and (max-width: 860px) {
+      width: 90%;
+    }
 
-  /* Adds transparent overlay over image. */
+    .card-tags {
+      text-align: center;
+    }
 
-  .card__media img {
-    display: block;
-    max-width: 100%;
-    height: auto;
-  }
+    .card-attribution {
+      font-size: 10px;
+      font-weight: 500;
+      text-decoration: none;
+      color: #b0b8bc;
+      text-align: center;
+    }
 
-  .card__media {
-    position: relative;
-    width: 100%;
-  }
+    .Freepik:hover {
+      text-decoration: none;
+    }
 
-  .card__content {
-    padding: 40px 25px;
-  }
-
-  /* Changes padding on wide card */
-  .card--wide .card__content {
-    padding: 20px 20px;
-    width: calc(100% - 300px);
-  }
-
-  /* Removes max-height on wide card */
-  .card--wide .card__excerpt {
-    max-height: none;
-  }
-
-  .card__title {
-    margin: 0 0 10px;
-    font-size: 20px;
-  }
-
-  .card__meta {
-    color: #ccc;
-    font-size: 14px;
-  }
-
-  .card-attribution {
-    font-size: 10px;
-    font-weight: 500;
-    text-decoration: none;
-    color: #b0b8bc;
-  }
-
-  .Freepik:hover {
-    text-decoration: none;
-  }
-
-  /* Tag Styling */
-  .tag {
-    display: inline-block;
-    background-color: #111b47;
-    color: white;
-    margin: 1vh;
-    padding: 5px 10px 5px 10px;
-    border-radius: 25px;
-    font-size: 12px;
-    font-weight: 500;
+    /* Tag Styling */
+    .tag {
+      display: inline-block;
+      background-color: #111b47;
+      color: white;
+      margin: 1vh;
+      padding: 5px 10px 5px 10px;
+      border-radius: 25px;
+      font-size: 12px;
+      font-weight: 500;
+    }
   }
 }
 
@@ -323,7 +314,7 @@ h6 {
   padding: 5px;
   text-align: center;
   text-decoration: none;
-  color: #b0b8bc;
+  color: $secondary;
 }
 
 .fa:hover {

@@ -15,13 +15,32 @@ function Hero() {
             2nd year CS student at <strong>Georgia Tech</strong>
           </p>
           <p>Threads in Intelligence and People.</p>
-          <ul>
-            <li class="fa fa-facebook grow"></li>
-            <li class="fa fa-twitter grow"></li>
-            <li class="fa fa-google grow"></li>
-            <li class="fa fa-github grow"></li>
-            <li class="fa fa-codepen grow"></li>
-          </ul>
+          <div className="hero-links">
+            <a
+              href="https://github.com/sauravghosal"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="fa fa-github grow"
+            ></a>
+            <a
+              href="https://www.facebook.com/saurav.ghosal.796"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="fa fa-facebook grow"
+            ></a>
+            <a
+              href="https://www.linkedin.com/in/saurav-ghosal-b71033171/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="fa fa-linkedin grow"
+            ></a>
+            <a
+              href="https://twitter.com/SauravGhosal3"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="fa fa-twitter grow"
+            ></a>
+          </div>
         </div>
         <div className="jumbotron-img">
           <img

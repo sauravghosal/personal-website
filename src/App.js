@@ -24,8 +24,8 @@ function App() {
       </Element>
       <Element id="contact" name="contact">
         <Contact />
+        <Footer />
       </Element>
-      <Footer />
     </React.Fragment>
   );
 }

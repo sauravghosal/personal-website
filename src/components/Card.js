@@ -2,16 +2,17 @@ import React from "react";
 
 const Card = props => {
   return (
-    <a
-      href={props.link}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="card"
-      data-aos="fade-up"
-    >
-      <div className="card__media">
+    <div className="card">
+      <a
+        href={props.link}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="image"
+        data-aos="fade-up"
+      >
         <img src={props.img} alt="project graphic" />
-      </div>
+      </a>
+
       {props.attribution && (
         <div className="card-attribution">
           Icons made by{" "}
@@ -25,18 +26,16 @@ const Card = props => {
           </a>
         </div>
       )}
-      <div className="card__content">
-        <header className="card__header">
-          <h2 class="card__title">{props.name}</h2>
-          <p>{props.content}</p>
-        </header>
-        <div className="card-tags">
-          {props.tags.map(tag => {
-            return <div className="tag">{tag}</div>;
-          })}
-        </div>
+      <p>
+        <b>{props.name}</b>
+        &nbsp;&nbsp;{props.content}
+      </p>
+      <div className="card-tags">
+        {props.tags.map(tag => {
+          return <div className="tag">{tag}</div>;
+        })}
       </div>
-    </a>
+    </div>
   );
 };
 

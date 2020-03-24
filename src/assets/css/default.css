@@ -15,27 +15,40 @@ body {
   height: 8vh;
   display: flex;
   flex-flow: row wrap;
-  align-items: baseline;
+  justify-content: space-between;
+  align-items: center;
   background: #f65058ff;
   color: white; }
   .navbar ul {
+    margin: 0;
+    padding: 0;
     list-style-type: none;
-    justify-self: flex-end;
     display: flex;
     flex-direction: row;
     justify-content: space-between; }
   .navbar li {
+    display: list-item;
     text-decoration: none; }
     .navbar li:hover {
       cursor: pointer;
       color: #fbdb6b; }
-  .navbar .logo {
-    justify-self: flex-start;
-    height: 30px;
-    width: 30px; }
-    .navbar .logo img {
-      max-width: 100%;
-      max-height: 100%; }
+
+.logo {
+  justify-self: flex-start;
+  height: 30px;
+  width: 30px; }
+  .logo img {
+    max-width: 100%;
+    max-height: 100%; }
+
+/* Styling for Smaller Screens */
+@media screen and (max-width: 450px) {
+  .logo {
+    display: none; }
+  ul {
+    margin: 0;
+    padding: 0;
+    justify-content: center; } }
 
 /* Text Colors */
 p {
@@ -61,13 +74,17 @@ h6 {
   width: auto;
   display: flex;
   flex-direction: column;
-  justify-content: center; }
+  justify-content: space-around;
+  padding-top: 10vh;
+  padding-bottom: 10vh;
+  padding-right: 10vw;
+  padding-left: 10vw; }
   .page .arrow {
     align-self: center;
     transition: all 0.2s ease-in-out;
     height: 20px;
     width: 20px;
-    margin-bottom: 0; }
+    margin-bottom: 20px; }
     .page .arrow:hover {
       cursor: pointer;
       transform: scale(1.5); }
@@ -81,8 +98,11 @@ h6 {
 
 /* Jumbotron Styling */
 .page.hero {
-  background-color: #fbdb6b; }
+  background-color: #fbdb6b;
+  padding-right: 0;
+  padding-left: 0; }
   .page.hero .jumbotron-content {
+    margin-top: 20vh;
     display: flex;
     flex-flow: row wrap;
     height: 100%;
@@ -92,24 +112,17 @@ h6 {
     /* Styling for Smaller Screens */ }
     .page.hero .jumbotron-content h1 span {
       font-weight: 1000; }
-    .page.hero .jumbotron-content .jumbotron-text {
-      padding-left: 5vw;
-      padding-right: 5vw; }
-      .page.hero .jumbotron-content .jumbotron-text ul {
-        padding: 0;
-        font-size: 2em; }
-        .page.hero .jumbotron-content .jumbotron-text ul li {
-          display: inline-block;
-          width: 2em;
-          color: #f65058ff; }
-          .page.hero .jumbotron-content .jumbotron-text ul li.grow {
-            transition: all 0.2s ease-in-out; }
-            .page.hero .jumbotron-content .jumbotron-text ul li.grow:hover {
-              transform: scale(1.5); }
-      .page.hero .jumbotron-content .jumbotron-text .jumbotron-img {
-        padding-left: 5vw;
-        padding-right: 5vw;
-        text-align: center; }
+    .page.hero .jumbotron-content .jumbotron-text .hero-links {
+      padding: 0;
+      font-size: 2em; }
+      .page.hero .jumbotron-content .jumbotron-text .hero-links a {
+        display: inline-block;
+        width: 2em;
+        color: #f65058ff; }
+        .page.hero .jumbotron-content .jumbotron-text .hero-links a.grow {
+          transition: all 0.2s ease-in-out; }
+          .page.hero .jumbotron-content .jumbotron-text .hero-links a.grow:hover {
+            transform: scale(1.5); }
     @media screen and (max-width: 950px) {
       .page.hero .jumbotron-content {
         display: flex;
@@ -126,67 +139,53 @@ h6 {
 .page.project {
   align-items: center;
   height: auto;
-  /* Card Styling */
-  /* Add box shadow to entire card on hover */
-  /* Creates variation of card component in a wide format */
-  /* Adds transparent overlay over image. */
-  /* Changes padding on wide card */
-  /* Removes max-height on wide card */
-  /* Tag Styling */ }
+  /* Card Styling */ }
   .page.project .card-container {
     display: flex;
     flex-flow: row wrap;
     justify-content: center; }
   .page.project .card {
-    text-align: center;
     width: 300px;
-    margin: 15px;
-    transition: box-shadow 0.3s ease-in-out;
-    box-shadow: 0 1px 2px 0 #111b47; }
-  .page.project .card:hover {
-    box-shadow: 0 1px 10px 0 #f65058ff;
-    text-decoration: none; }
-  .page.project .card.card--wide {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 768px; }
-  .page.project .card__media img {
-    display: block;
-    max-width: 100%;
-    height: auto; }
-  .page.project .card__media {
-    position: relative;
-    width: 100%; }
-  .page.project .card__content {
-    padding: 40px 25px; }
-  .page.project .card--wide .card__content {
-    padding: 20px 20px;
-    width: calc(100% - 300px); }
-  .page.project .card--wide .card__excerpt {
-    max-height: none; }
-  .page.project .card__title {
-    margin: 0 0 10px;
-    font-size: 20px; }
-  .page.project .card__meta {
-    color: #ccc;
-    font-size: 14px; }
-  .page.project .card-attribution {
-    font-size: 10px;
-    font-weight: 500;
-    text-decoration: none;
-    color: #b0b8bc; }
-  .page.project .Freepik:hover {
-    text-decoration: none; }
-  .page.project .tag {
-    display: inline-block;
-    background-color: #111b47;
-    color: white;
-    margin: 1vh;
-    padding: 5px 10px 5px 10px;
-    border-radius: 25px;
-    font-size: 12px;
-    font-weight: 500; }
+    margin: 20px;
+    border: black 2px;
+    background-color: #eee;
+    /* Tag Styling */ }
+    .page.project .card p {
+      display: block;
+      margin-block-start: 1em;
+      margin-block-end: 1em;
+      margin-inline-start: 0px;
+      margin-inline-end: 0px;
+      font-size: 14px;
+      padding: 25px;
+      padding-top: 0px;
+      text-align: left;
+      line-height: 24px;
+      color: black; }
+    .page.project .card .image img {
+      width: 100%; }
+    @media screen and (max-width: 860px) {
+      .page.project .card {
+        width: 90%; } }
+    .page.project .card .card-tags {
+      text-align: center; }
+    .page.project .card .card-attribution {
+      font-size: 10px;
+      font-weight: 500;
+      text-decoration: none;
+      color: #b0b8bc;
+      text-align: center; }
+    .page.project .card .Freepik:hover {
+      text-decoration: none; }
+    .page.project .card .tag {
+      display: inline-block;
+      background-color: #111b47;
+      color: white;
+      margin: 1vh;
+      padding: 5px 10px 5px 10px;
+      border-radius: 25px;
+      font-size: 12px;
+      font-weight: 500; }
 
 .footer {
   background-color: #fbdb6b; }
@@ -229,7 +228,7 @@ h6 {
   padding: 5px;
   text-align: center;
   text-decoration: none;
-  color: #b0b8bc; }
+  color: #f65058ff; }
 
 .fa:hover {
   text-decoration: none;
