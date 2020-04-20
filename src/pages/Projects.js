@@ -3,8 +3,6 @@ import Card from "../components/Card";
 import biary from "../assets/images/biary-img.png";
 import funkyFridge from "../assets/images/funky-fridge-img.png";
 import bgcSafety from "../assets/images/bgc-safety.png";
-import { useScroll } from "react-use-gesture";
-import { useSpring } from "react-spring";
 import Scroll from "react-scroll";
 import PerfectScrollbar from "react-perfect-scrollbar";
 import "react-perfect-scrollbar/dist/css/styles.css";
