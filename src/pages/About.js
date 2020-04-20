@@ -27,10 +27,8 @@ const About = () => {
           interest in music with my passion for computer science.
         </p>
         <p>
-          Take a look at my <a href="/"> previous projects </a> to get an idea
-          of what I've worked on. Also, don't hesitate to
-          <a href="/contact"> reach out </a>
-          if you have any questions!
+          Take a look at my previous projects to get an idea of what I've worked
+          on. Also, don't hesitate to reach out if you have any questions!
         </p>
       </div>
       <Link

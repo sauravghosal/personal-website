@@ -1,9 +1,9 @@
-$primary: #fbdb6b;
-$secondary: #f65058ff;
+$primary: #3aafa9;
+$secondary: #17252a;
 $text: white;
 
-$mediumLayout: 950px;
-$smallLayout: 450px;
+$tabletLayout: 850px;
+$mobileLayout: 480px;
 
 body {
   margin: 0;
@@ -16,7 +16,7 @@ body {
 
 /* Header Styling */
 .navbar {
-  position: fixed;
+  position: relative;
   top: 0;
   left: 0;
   z-index: 9999;
@@ -28,6 +28,12 @@ body {
   align-items: center;
   background: $secondary;
   color: $text;
+
+  .logo {
+    &:hover {
+      cursor: pointer;
+    }
+  }
 
   ul {
     margin: 0;
@@ -43,6 +49,7 @@ body {
 
     &:hover {
       cursor: pointer;
+      text-decoration: none;
       color: $primary;
     }
   }
@@ -58,7 +65,10 @@ body {
   }
 }
 /* Styling for Smaller Screens */
-@media screen and (max-width: $smallLayout) {
+@media screen and (max-width: $mobileLayout) {
+  .navbar {
+    justify-content: center;
+  }
   .logo {
     display: none;
   }
@@ -69,14 +79,6 @@ body {
     justify-content: center;
   }
 }
-
-// /* Button Styling */
-// .btn-secon$secondary,
-// .btn-secon$secondary:hover,
-// .btn-secon$secondary:active,
-// .btn-secon$secondary:visited {
-//   background-color: $secondary !important;
-// }
 
 /* Text Colors */
 p {
@@ -102,13 +104,11 @@ h6 {
   min-height: 100vh;
   display: flex;
   width: auto;
-  display: flex;
   flex-direction: column;
-  justify-content: space-around;
-  padding-top: 10vh;
-  padding-bottom: 10vh;
+  justify-content: center;
   padding-right: 10vw;
   padding-left: 10vw;
+  overflow: hidden;
 
   // figure out how to put this at bottom without flexbox
   .arrow {
@@ -116,11 +116,11 @@ h6 {
     transition: all 0.2s ease-in-out;
     height: 20px;
     width: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 45px;
 
     &:hover {
       cursor: pointer;
-      transform: scale(1.5);
+      transform: scale(1.2);
     }
     i {
       border: solid black;
@@ -132,6 +132,10 @@ h6 {
         -webkit-transform: rotate(45deg);
       }
     }
+
+    @media screen and (max-width: $tabletLayout) {
+      display: none;
+    }
   }
 }
 
@@ -140,17 +144,25 @@ h6 {
   background-color: $primary;
   padding-right: 0;
   padding-left: 0;
+  padding-bottom: 100px;
+
+  .arrow {
+    margin-bottom: 20px;
+  }
 
   .jumbotron-content {
-    margin-top: 20vh;
     display: flex;
     flex-flow: row wrap;
     height: 100%;
     width: 100%;
     align-items: center;
     justify-content: space-around;
+    margin-top: auto;
+    margin-bottom: auto;
 
     h1 {
+      margin-top: 50px;
+
       span {
         font-weight: 1000;
       }
@@ -165,6 +177,7 @@ h6 {
           display: inline-block;
           width: 2em;
           color: $secondary;
+          text-decoration: none;
 
           &.grow {
             transition: all 0.2s ease-in-out;
@@ -178,16 +191,18 @@ h6 {
     }
 
     /* Styling for Smaller Screens */
-    @media screen and (max-width: $mediumLayout) {
+    @media screen and (max-width: $tabletLayout) {
       display: flex;
       flex-flow: column-reverse wrap;
       align-items: center;
       justify-content: center;
+      margin: 0;
 
       .avatar-img {
         max-width: 50vw;
         max-height: 50vw;
       }
+
       .jumbotron-text {
         text-align: center;
         width: 100%;
@@ -199,127 +214,153 @@ h6 {
 .page.project {
   align-items: center;
   height: auto;
+  margin-top: auto;
+  margin-bottom: auto;
 
-  .card-container {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-  }
+  .project-content {
+    text-align: center;
+    margin-bottom: auto;
+    margin-top: auto;
 
-  /* Card Styling */
-  .card {
-    width: 300px;
-    margin: 20px;
-    border: black 2px;
-    background-color: #eee;
-
-    p {
-      display: block;
-      margin-block-start: 1em;
-      margin-block-end: 1em;
-      margin-inline-start: 0px;
-      margin-inline-end: 0px;
-      font-size: 14px;
-      padding: 25px;
-      padding-top: 0px;
-      text-align: left;
-      line-height: 24px;
-      color: black;
+    h1 {
+      font-weight: bold;
+      justify-self: flex-start;
+      text-align: center;
+      margin-bottom: 5vh;
     }
-    .image {
-      img {
-        width: 100%;
+
+    .card-container {
+      position: relative;
+      width: 1000px;
+      display: flex;
+      min-height: 0px;
+      @media screen and (max-width: $tabletLayout) {
+        width: 680px;
+      }
+
+      @media screen and (max-width: $mobileLayout) {
+        width: 340px;
       }
     }
 
-    @media screen and (max-width: 860px) {
-      width: 90%;
-    }
+    /* Card Styling */
+    .card {
+      position: absolute;
+      max-width: 500px;
+      max-height: 500px;
+      width: 50ch;
+      height: 50ch;
+      cursor: pointer;
+      will-change: transform, opacity;
 
-    .card-tags {
-      text-align: center;
-    }
+      .front {
+        img {
+          width: 100%;
+        }
+        width: 400px;
+        height: 400px;
+      }
 
-    .card-attribution {
-      font-size: 10px;
-      font-weight: 500;
-      text-decoration: none;
-      color: #b0b8bc;
-      text-align: center;
-    }
+      .back {
+        p {
+          color: black;
+        }
 
-    .Freepik:hover {
-      text-decoration: none;
-    }
+        .card-tags {
+          text-align: center;
+          margin-bottom: 15px;
+        }
 
-    /* Tag Styling */
-    .tag {
-      display: inline-block;
-      background-color: #111b47;
-      color: white;
-      margin: 1vh;
-      padding: 5px 10px 5px 10px;
-      border-radius: 25px;
-      font-size: 12px;
-      font-weight: 500;
+        .card-attribution {
+          font-size: 10px;
+          font-weight: 500;
+          text-decoration: none;
+          color: #b0b8bc;
+          text-align: center;
+        }
+
+        .Freepik:hover {
+          text-decoration: none;
+        }
+
+        /* Tag Styling */
+        .tag {
+          display: inline-block;
+          background-color: $secondary;
+          color: white;
+          margin: 1vh;
+          padding: 5px 10px 5px 10px;
+          border-radius: 25px;
+          font-size: 12px;
+          font-weight: 500;
+        }
+      }
     }
   }
 }
 
-.footer {
-  background-color: $primary;
-}
+.page.contact {
+  padding-bottom: 0;
 
-/* Footer Styling */
-.footer-text {
-  display: flex;
-  justify-content: center;
-  padding-top: 5vh;
-}
+  .content {
+    margin-top: auto;
+    width: 100%;
+  }
 
-.footer-lower {
-  display: flex;
-  align-items: center;
-  padding-bottom: 2vh;
-}
+  h1 {
+    text-align: center;
+  }
 
-/* Links in Footer */
-.ftr-link {
-  color: $secondary !important;
-  padding-left: 1vw;
-  padding-right: 1vw;
-}
+  footer {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    background-color: $secondary;
+    margin-top: auto;
+    padding: 20px 20px 5px 20px;
+    width: 100vw;
+    position: relative;
+    left: calc(-50vw + 50%);
 
-.ftr-link:hover {
-  text-decoration: none;
-  opacity: 0.7;
-  cursor: pointer;
-}
+    p {
+      font-size: 12px;
+      color: $text;
+    }
+  }
 
-.footer-links {
-  display: flex;
-  flex-direction: row;
-}
+  .footer-icons {
+    margin-left: auto;
+    margin-right: 0;
+    flex: 0 0 50%;
+    display: flex;
+    justify-content: flex-end;
+  }
 
-.footer-icons {
-  margin-left: auto;
-  margin-right: 0;
-  flex: 0 0 50%;
-  display: flex;
-  justify-content: flex-end;
-}
+  /* Social Media Icons */
+  .fa {
+    padding: 5px;
+    text-align: center;
+    text-decoration: none;
+    color: $text;
+  }
 
-/* Social Media Icons */
-.fa {
-  padding: 5px;
-  text-align: center;
-  text-decoration: none;
-  color: $secondary;
-}
+  .fa:hover {
+    text-decoration: none;
+    opacity: 0.7;
+  }
 
-.fa:hover {
-  text-decoration: none;
-  opacity: 0.7;
+  .btn {
+    color: $text;
+  }
+
+  .error-msg {
+    margin-left: 10px;
+  }
+
+  .success-msg {
+    color: green;
+    margin-left: 10px;
+  }
 }
 
 .page-content {
@@ -333,19 +374,33 @@ h6 {
   background-color: $secondary;
 
   .content {
-    width: 100%;
-    height: 100%;
+    margin-top: auto;
+    margin-bottom: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
     h1 {
+      color: $text;
+      font-weight: bold;
       justify-self: flex-start;
       text-align: center;
-      margin-top: 50px;
+      margin-bottom: 5vh;
     }
 
     p {
+      font-size: 20px;
       color: white;
+      margin: 20px;
+    }
+
+    @media screen and (max-width: $mobileLayout) {
+      h1 {
+        margin-bottom: 2vh;
+      }
+      p {
+        font-size: 15px;
+        margin: 10px;
+      }
     }
   }
 }

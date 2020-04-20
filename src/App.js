@@ -6,13 +6,12 @@ import Projects from "./pages/Projects";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Header from "./components/Header";
-import Footer from "./components/Footer";
 import { Element } from "react-scroll";
 
 function App() {
   return (
     <React.Fragment>
-      <Header />
+      <Header style={{ overflow: "none" }} />
       <Element id="hero" name="hero">
         <Hero />
       </Element>
@@ -24,7 +23,6 @@ function App() {
       </Element>
       <Element id="contact" name="contact">
         <Contact />
-        <Footer />
       </Element>
     </React.Fragment>
   );
