@@ -177,42 +177,45 @@ h6 {
         .page.project .project-content .card-container {
           width: 340px; } }
     .page.project .project-content .card {
-      position: absolute;
-      max-width: 500px;
-      max-height: 500px;
-      width: 50ch;
-      height: 50ch;
-      cursor: pointer;
-      will-change: transform, opacity; }
-      .page.project .project-content .card .front {
-        width: 400px;
-        height: 400px; }
-        .page.project .project-content .card .front img {
-          width: 100%; }
-      .page.project .project-content .card .back {
-        /* Tag Styling */ }
-        .page.project .project-content .card .back p {
-          color: black; }
-        .page.project .project-content .card .back .card-tags {
-          text-align: center;
-          margin-bottom: 15px; }
-        .page.project .project-content .card .back .card-attribution {
-          font-size: 10px;
-          font-weight: 500;
-          text-decoration: none;
-          color: #b0b8bc;
-          text-align: center; }
-        .page.project .project-content .card .back .Freepik:hover {
-          text-decoration: none; }
-        .page.project .project-content .card .back .tag {
-          display: inline-block;
-          background-color: #17252a;
-          color: white;
-          margin: 1vh;
-          padding: 5px 10px 5px 10px;
-          border-radius: 25px;
-          font-size: 12px;
-          font-weight: 500; }
+      width: 300px;
+      flex: 0 0 300px;
+      margin: 20px;
+      border: black 2px;
+      background-color: #eee;
+      /* Tag Styling */ }
+      .page.project .project-content .card p {
+        display: block;
+        margin-block-start: 1em;
+        margin-block-end: 1em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+        font-size: 14px;
+        padding: 0px 25px 0px 25px;
+        text-align: left;
+        line-height: 24px;
+        color: black; }
+      .page.project .project-content .card .image img {
+        width: 100%; }
+      .page.project .project-content .card .card-tags {
+        text-align: center;
+        margin-bottom: 15px; }
+      .page.project .project-content .card .card-attribution {
+        font-size: 10px;
+        font-weight: 500;
+        text-decoration: none;
+        color: #b0b8bc;
+        text-align: center; }
+      .page.project .project-content .card .Freepik:hover {
+        text-decoration: none; }
+      .page.project .project-content .card .tag {
+        display: inline-block;
+        background-color: #17252a;
+        color: white;
+        margin: 1vh;
+        padding: 5px 10px 5px 10px;
+        border-radius: 25px;
+        font-size: 12px;
+        font-weight: 500; }
 
 .page.contact {
   padding-bottom: 0;

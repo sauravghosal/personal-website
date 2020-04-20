@@ -233,6 +233,7 @@ h6 {
       position: relative;
       width: 1000px;
       display: flex;
+
       min-height: 0px;
       @media screen and (max-width: $tabletLayout) {
         width: 680px;
@@ -245,55 +246,61 @@ h6 {
 
     /* Card Styling */
     .card {
-      position: absolute;
-      max-width: 500px;
-      max-height: 500px;
-      width: 50ch;
-      height: 50ch;
-      cursor: pointer;
-      will-change: transform, opacity;
+      width: 300px;
+      flex: 0 0 300px;
+      margin: 20px;
+      border: black 2px;
+      background-color: #eee;
 
-      .front {
+      p {
+        display: block;
+        margin-block-start: 1em;
+        margin-block-end: 1em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+        font-size: 14px;
+        padding: 0px 25px 0px 25px;
+        text-align: left;
+        line-height: 24px;
+        color: black;
+      }
+      .image {
         img {
           width: 100%;
         }
-        width: 400px;
-        height: 400px;
       }
 
-      .back {
-        p {
-          color: black;
-        }
+      // @media screen and (max-width: $tabletLayout) {
+      //   width: 90%;
+      // }
 
-        .card-tags {
-          text-align: center;
-          margin-bottom: 15px;
-        }
+      .card-tags {
+        text-align: center;
+        margin-bottom: 15px;
+      }
 
-        .card-attribution {
-          font-size: 10px;
-          font-weight: 500;
-          text-decoration: none;
-          color: #b0b8bc;
-          text-align: center;
-        }
+      .card-attribution {
+        font-size: 10px;
+        font-weight: 500;
+        text-decoration: none;
+        color: #b0b8bc;
+        text-align: center;
+      }
 
-        .Freepik:hover {
-          text-decoration: none;
-        }
+      .Freepik:hover {
+        text-decoration: none;
+      }
 
-        /* Tag Styling */
-        .tag {
-          display: inline-block;
-          background-color: $secondary;
-          color: white;
-          margin: 1vh;
-          padding: 5px 10px 5px 10px;
-          border-radius: 25px;
-          font-size: 12px;
-          font-weight: 500;
-        }
+      /* Tag Styling */
+      .tag {
+        display: inline-block;
+        background-color: $secondary;
+        color: white;
+        margin: 1vh;
+        padding: 5px 10px 5px 10px;
+        border-radius: 25px;
+        font-size: 12px;
+        font-weight: 500;
       }
     }
   }
