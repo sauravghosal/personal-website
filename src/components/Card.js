@@ -1,14 +1,14 @@
 import React from "react";
+import { animated } from "react-spring";
 
-const Card = props => {
+const Card = (props) => {
   return (
-    <div className="card">
+    <animated.div className="card" style={props.style}>
       <a
         href={props.link}
         target="_blank"
         rel="noopener noreferrer"
         className="image"
-        data-aos="fade-up"
       >
         <img src={props.img} alt="project graphic" />
       </a>
@@ -31,11 +31,11 @@ const Card = props => {
         &nbsp;&nbsp;{props.content}
       </p>
       <div className="card-tags">
-        {props.tags.map(tag => {
+        {props.tags.map((tag) => {
           return <div className="tag">{tag}</div>;
         })}
       </div>
-    </div>
+    </animated.div>
   );
 };
 
