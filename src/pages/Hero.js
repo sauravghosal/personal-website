@@ -18,24 +18,28 @@ function Hero() {
           <div className="hero-links">
             <a
               href="https://github.com/sauravghosal"
+              alt="GitHub Link"
               target="_blank"
               rel="noopener noreferrer"
               class="fa fa-github grow"
             ></a>
             <a
               href="https://www.facebook.com/saurav.ghosal.796"
+              alt="Facebook Link"
               target="_blank"
               rel="noopener noreferrer"
               class="fa fa-facebook grow"
             ></a>
             <a
               href="https://www.linkedin.com/in/saurav-ghosal-b71033171/"
+              alt="LinkedIn Link"
               target="_blank"
               rel="noopener noreferrer"
               class="fa fa-linkedin grow"
             ></a>
             <a
               href="https://twitter.com/SauravGhosal3"
+              alt="Twitter Link"
               target="_blank"
               rel="noopener noreferrer"
               class="fa fa-twitter grow"
@@ -46,6 +50,8 @@ function Hero() {
           <img
             src={require("../assets/images/avatar.jpg")}
             className="avatar-img"
+            height="300px"
+            width="300px"
             alt="avatar"
           />
         </div>

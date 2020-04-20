@@ -88,26 +88,6 @@ const cards = [
 ];
 
 const Projects = () => {
-  const [style, set] = useSpring(() => ({
-    transform: "perspective(500px) rotateY(0deg)",
-  }));
-
-  const bind = useScroll((event) => {
-    set({
-      transform: `perspective(500px) rotateY(${
-        event.scrolling ? clamp(event.delta[0], 30) : 0
-      }deg)`,
-    });
-  });
-
-  const clamp = (value, clampAt) => {
-    if (value > 0) {
-      return value > clampAt ? clampAt : value;
-    } else {
-      return value < -clampAt ? -clampAt : value;
-    }
-  };
-
   return (
     <div className="page project">
       <div className="project-content">
@@ -115,7 +95,6 @@ const Projects = () => {
 
         <PerfectScrollbar
           className="card-container"
-          {...bind()}
           options={{ suppressScrollY: true }}
           component="div"
         >
@@ -128,7 +107,6 @@ const Projects = () => {
                 img={card.img}
                 attribution={card.attribution}
                 tags={card.tags}
-                style={style}
               />
             );
           })}

@@ -232,8 +232,9 @@ h6 {
     .card-container {
       position: relative;
       width: 1000px;
-      display: flex;
+      display: flex;  
       min-height: 0px;
+      
       @media screen and (max-width: $tabletLayout) {
         width: 680px;
       }
