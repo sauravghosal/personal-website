@@ -1,29 +1,29 @@
 {
   "files": {
-    "main.css": "/static/css/main.36400d81.chunk.css",
-    "main.js": "/static/js/main.8804a839.chunk.js",
-    "main.js.map": "/static/js/main.8804a839.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.12b590f4.js",
-    "runtime-main.js.map": "/static/js/runtime-main.12b590f4.js.map",
-    "static/css/2.f7ca946b.chunk.css": "/static/css/2.f7ca946b.chunk.css",
-    "static/js/2.5ab3c879.chunk.js": "/static/js/2.5ab3c879.chunk.js",
-    "static/js/2.5ab3c879.chunk.js.map": "/static/js/2.5ab3c879.chunk.js.map",
-    "index.html": "/index.html",
-    "precache-manifest.492cfe905df717dcd9fd3d0045226087.js": "/precache-manifest.492cfe905df717dcd9fd3d0045226087.js",
-    "service-worker.js": "/service-worker.js",
-    "static/css/2.f7ca946b.chunk.css.map": "/static/css/2.f7ca946b.chunk.css.map",
-    "static/css/main.36400d81.chunk.css.map": "/static/css/main.36400d81.chunk.css.map",
-    "static/js/2.5ab3c879.chunk.js.LICENSE.txt": "/static/js/2.5ab3c879.chunk.js.LICENSE.txt",
-    "static/media/avatar.jpg": "/static/media/avatar.47317a3a.jpg",
-    "static/media/bgc-safety.png": "/static/media/bgc-safety.a9c5effc.png",
-    "static/media/biary-img.png": "/static/media/biary-img.03c37427.png",
-    "static/media/funky-fridge-img.png": "/static/media/funky-fridge-img.98452aff.png"
+    "main.css": "/personal-website/static/css/main.36400d81.chunk.css",
+    "main.js": "/personal-website/static/js/main.28146a33.chunk.js",
+    "main.js.map": "/personal-website/static/js/main.28146a33.chunk.js.map",
+    "runtime-main.js": "/personal-website/static/js/runtime-main.aee6faec.js",
+    "runtime-main.js.map": "/personal-website/static/js/runtime-main.aee6faec.js.map",
+    "static/css/2.f7ca946b.chunk.css": "/personal-website/static/css/2.f7ca946b.chunk.css",
+    "static/js/2.5ab3c879.chunk.js": "/personal-website/static/js/2.5ab3c879.chunk.js",
+    "static/js/2.5ab3c879.chunk.js.map": "/personal-website/static/js/2.5ab3c879.chunk.js.map",
+    "index.html": "/personal-website/index.html",
+    "precache-manifest.7fc57951a9e2cc9b12d00f8e1b75167a.js": "/personal-website/precache-manifest.7fc57951a9e2cc9b12d00f8e1b75167a.js",
+    "service-worker.js": "/personal-website/service-worker.js",
+    "static/css/2.f7ca946b.chunk.css.map": "/personal-website/static/css/2.f7ca946b.chunk.css.map",
+    "static/css/main.36400d81.chunk.css.map": "/personal-website/static/css/main.36400d81.chunk.css.map",
+    "static/js/2.5ab3c879.chunk.js.LICENSE.txt": "/personal-website/static/js/2.5ab3c879.chunk.js.LICENSE.txt",
+    "static/media/avatar.jpg": "/personal-website/static/media/avatar.47317a3a.jpg",
+    "static/media/bgc-safety.png": "/personal-website/static/media/bgc-safety.a9c5effc.png",
+    "static/media/biary-img.png": "/personal-website/static/media/biary-img.03c37427.png",
+    "static/media/funky-fridge-img.png": "/personal-website/static/media/funky-fridge-img.98452aff.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.12b590f4.js",
+    "static/js/runtime-main.aee6faec.js",
     "static/css/2.f7ca946b.chunk.css",
     "static/js/2.5ab3c879.chunk.js",
     "static/css/main.36400d81.chunk.css",
-    "static/js/main.8804a839.chunk.js"
+    "static/js/main.28146a33.chunk.js"
   ]
 }
