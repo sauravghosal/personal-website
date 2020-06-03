@@ -8,11 +8,18 @@ function Footer() {
       </p>
       <div className="footer-icons">
         <a
+          href="mailto:sghosal9@gatech.edu"
+          alt="GitHub Link"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="fa fa-envelope"
+        ></a>
+        <a
           href="https://github.com/sauravghosal"
           alt="GitHub Link"
           target="_blank"
           rel="noopener noreferrer"
-          class="fa fa-github grow"
+          class="fa fa-github"
         ></a>
         <a
           href="https://www.facebook.com/saurav.ghosal.796"

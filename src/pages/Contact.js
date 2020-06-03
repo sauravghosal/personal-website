@@ -1,7 +1,6 @@
 import React from "react";
 import Form from "react-bootstrap/Form";
 import Axios from "axios";
-import Footer from "../components/Footer";
 
 class Contact extends React.Component {
   constructor(props) {
@@ -12,7 +11,7 @@ class Contact extends React.Component {
       message: "",
       disabled: false,
       emailSent: null,
-      btnColor: "#f65058ff",
+      btnColor: "#3aafa9",
     };
   }
 
@@ -109,7 +108,6 @@ class Contact extends React.Component {
             )}
           </Form>
         </div>
-        <Footer />
       </div>
     );
   }

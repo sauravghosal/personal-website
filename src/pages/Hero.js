@@ -17,12 +17,20 @@ function Hero() {
           <p>Threads in Intelligence and People.</p>
           <div className="hero-links">
             <a
+              href="mailto:sghosal9@gatech.edu"
+              alt="GitHub Link"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="fa fa-envelope grow"
+            ></a>
+            <a
               href="https://github.com/sauravghosal"
               alt="GitHub Link"
               target="_blank"
               rel="noopener noreferrer"
               class="fa fa-github grow"
             ></a>
+
             <a
               href="https://www.facebook.com/saurav.ghosal.796"
               alt="Facebook Link"

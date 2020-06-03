@@ -10,13 +10,13 @@ const Link = Scroll.Link;
 
 const cards = [
   {
-    name: "Biary (Digital Diary)",
+    name: "Personal Blog",
     content:
-      "An online diary that detects your mood and gives appropriate feedback",
-    link: "https://github.com/sauravghosal/biary",
-    img: biary,
+      "A low-stakes personal blog for me to discuss travel adventures, reflective moments, and more.",
+    link: "https://sauravghosal.github.io/personal-blog/",
+    img: "none",
     attribution: false,
-    tags: ["React", "JavaScript"],
+    tags: ["ReactJS", "MongoDB"],
   },
   {
     name: "Bus Check-in System",
@@ -28,52 +28,13 @@ const cards = [
     tags: ["NextJS", "JavaScript"],
   },
   {
-    name: "Funky Fridge",
-    content: "An Android app to keep track of items in your fridge",
-    link: "https://github.com/funkyFridge",
-    img: funkyFridge,
-    attribution: true,
-    tags: ["Android Studio", "Kotlin"],
-  },
-  {
-    name: "Funky Fridge",
-    content: "An Android app to keep track of items in your fridge",
-    link: "https://github.com/funkyFridge",
-    img: funkyFridge,
-    attribution: true,
-    tags: ["Android Studio", "Kotlin"],
-  },
-  {
-    name: "Funky Fridge",
-    content: "An Android app to keep track of items in your fridge",
-    link: "https://github.com/funkyFridge",
-    img: funkyFridge,
-    attribution: true,
-    tags: ["Android Studio", "Kotlin"],
-  },
-  {
-    name: "Funky Fridge",
-    content: "An Android app to keep track of items in your fridge",
-    link: "https://github.com/funkyFridge",
-    img: funkyFridge,
-    attribution: true,
-    tags: ["Android Studio", "Kotlin"],
-  },
-  {
-    name: "Funky Fridge",
-    content: "An Android app to keep track of items in your fridge",
-    link: "https://github.com/funkyFridge",
-    img: funkyFridge,
-    attribution: true,
-    tags: ["Android Studio", "Kotlin"],
-  },
-  {
-    name: "Funky Fridge",
-    content: "An Android app to keep track of items in your fridge",
-    link: "https://github.com/funkyFridge",
-    img: funkyFridge,
-    attribution: true,
-    tags: ["Android Studio", "Kotlin"],
+    name: "Biary (Digital Diary)",
+    content:
+      "An online diary that detects your mood and gives appropriate feedback",
+    link: "https://github.com/sauravghosal/biary",
+    img: biary,
+    attribution: false,
+    tags: ["React", "JavaScript"],
   },
   {
     name: "Funky Fridge",
