@@ -1,6 +1,5 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "./assets/css/default.css";
 import Hero from "./pages/Hero";
 import Projects from "./pages/Projects";
 import About from "./pages/About";
