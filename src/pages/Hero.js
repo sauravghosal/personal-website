@@ -1,81 +1,90 @@
 import React from "react";
 import Scroll from "react-scroll";
-const Link = Scroll.Link;
+import avatarImage from "../assets/images/avatar.jpg";
+import {
+  FaEnvelope,
+  FaGithub,
+  FaFacebook,
+  FaLinkedin,
+  FaTwitter,
+} from "react-icons/fa";
+import Resume from "../assets/documents/resume.pdf";
 
 function Hero() {
-  // takes in title, subtitle, text as props
   return (
-    <div className="page hero">
-      <div className="jumbotron-content">
-        <div className="jumbotron-text">
-          <h1>
-            Hey, I'm <span>Saurav Ghosal.</span>
-          </h1>
-          <p>
-            2nd year CS student at <strong>Georgia Tech</strong>
+    <div className="h-screen">
+      <div className="flex flex-col-reverse md:flex-row justify-center md:justify-between items-center h-screen">
+        <div className="space-y-3 md:w-1/2">
+          <div>
+            <p className="font-light">Hi, my name is</p>
+            <h1 className="text-4xl md:text-5xl">Saurav Ghosal.</h1>
+          </div>
+          <p className="font-light">
+            I'm a software developer looking to create technology that drives
+            change.
           </p>
-          <p>Threads in Intelligence and People.</p>
-          <div className="hero-links">
+          <div className="flex space-x-5 text-xl">
             <a
               href="mailto:sghosal9@gatech.edu"
               alt="GitHub Link"
               target="_blank"
               rel="noopener noreferrer"
-              class="fa fa-envelope grow"
-            ></a>
+            >
+              <FaEnvelope className="hover:text-blue-400" />
+            </a>
             <a
               href="https://github.com/sauravghosal"
               alt="GitHub Link"
               target="_blank"
               rel="noopener noreferrer"
-              class="fa fa-github grow"
-            ></a>
+            >
+              <FaGithub className="hover:text-blue-400" />
+            </a>
 
             <a
               href="https://www.facebook.com/saurav.ghosal.796"
               alt="Facebook Link"
               target="_blank"
               rel="noopener noreferrer"
-              class="fa fa-facebook grow"
-            ></a>
+            >
+              <FaFacebook className="hover:text-blue-400" />
+            </a>
             <a
               href="https://www.linkedin.com/in/saurav-ghosal-b71033171/"
               alt="LinkedIn Link"
               target="_blank"
               rel="noopener noreferrer"
-              class="fa fa-linkedin grow"
-            ></a>
+            >
+              <FaLinkedin className="hover:text-blue-400" />
+            </a>
             <a
               href="https://twitter.com/SauravGhosal3"
               alt="Twitter Link"
               target="_blank"
               rel="noopener noreferrer"
-              class="fa fa-twitter grow"
-            ></a>
+            >
+              <FaTwitter className="hover:text-blue-400" />
+            </a>
           </div>
+          <a
+            href={Resume}
+            target="_blank"
+            download="Saurav Ghosal Resume"
+            className="inline-block bg-orange-400 hover:bg-orange-500 text-white font-extrabold py-2 px-4 rounded hover:no-underline cursor-pointer"
+          >
+            Download My Resume
+          </a>
         </div>
-        <div className="jumbotron-img">
+        <div className="p-5 md:p-0">
           <img
-            src={require("../assets/images/avatar.jpg")}
-            className="avatar-img"
+            src={avatarImage}
+            className="rounded-full"
             height="300px"
             width="300px"
             alt="avatar"
           />
         </div>
       </div>
-      <Link
-        to="projects"
-        spy={true}
-        smooth={true}
-        duration={500}
-        activeClass="active"
-        className="arrow"
-      >
-        <div>
-          <i class="arrow down"></i>
-        </div>
-      </Link>
     </div>
   );
 }

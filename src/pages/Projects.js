@@ -1,62 +1,61 @@
 import React from "react";
 import Card from "../components/Card";
-import biary from "../assets/images/biary-img.png";
-import funkyFridge from "../assets/images/funky-fridge-img.png";
-import bgcSafety from "../assets/images/bgc-safety.png";
-import Scroll from "react-scroll";
-import PerfectScrollbar from "react-perfect-scrollbar";
-import "react-perfect-scrollbar/dist/css/styles.css";
-const Link = Scroll.Link;
+import GMTMSportsImage from "../assets/images/GMTMSports.jpeg";
+import VMwawareImage from "../assets/images/VMAware.svg";
+import BGCSafetyImage from "../assets/images/bgc-safety.png";
+import personalWebsiteImage from "../assets/images/personal-website.svg";
 
 const cards = [
   {
-    name: "Personal Blog",
+    name: "GMTM Analytics Dashboard ",
     content:
-      "A low-stakes personal blog for me to discuss travel adventures, reflective moments, and more.",
-    link: "https://sauravghosal.github.io/personal-blog/",
-    img: "none",
-    attribution: false,
-    tags: ["ReactJS", "MongoDB"],
+      "GMTM is a startup whose mission is to maximize engagement and exposure for athletes, \
+      organizations, and brands. My analytics UI dashboard brought to the company a new way \
+      for coaches and athletes to track the effectiveness of their profiles. ",
+    img: GMTMSportsImage,
+    link: "https://gmtm.com/home",
+    tags: ["ReactJS", "NextJS", "TailwindCSS", "ChartJS"],
   },
   {
-    name: "Bus Check-in System",
+    name: "VMAware D&I Hub",
     content:
-      "A web app to help children in the Boys and Girls club check into their buses",
-    link: "https://github.com/funkyFridge",
-    img: bgcSafety,
-    attribution: false,
+      "VMAware is a new D&I hub where employees can view live data on the company's progress \
+      towards its D&I goals each quarter, and provide continuous feedback to VMware through \
+      sentiment analysis surveys.",
+    img: VMwawareImage,
+    award: true,
+    link: "https://github.com/j-alicia-long/SunShine",
+    tags: ["ReactJS", "NodeJS", "Heroku", "Bootstrap"],
+  },
+  {
+    name: "National NonProfit Portal",
+    content:
+      "The National Non-profit portal serves to streamline the process for non-profits \
+      to apply for web development or technical support from any Hack4Impact Chapter.",
+    link: "https://github.com/GTBitsOfGood/national-npp",
+    img: personalWebsiteImage,
+    tags: ["NextJS", "ChakraUI"],
+  },
+  {
+    name: "ATL Boys and Girls Club Bus Check-in System",
+    content:
+      "BGC Safety is a team whose mission is to streamline the bus check in process \
+       for aftercare students attending the Boys and Girls Club of Atlanta",
+    link: "https://github.com/GTBitsOfGood/bgc-safety",
+    img: BGCSafetyImage,
     tags: ["NextJS", "JavaScript"],
-  },
-  {
-    name: "Biary (Digital Diary)",
-    content:
-      "An online diary that detects your mood and gives appropriate feedback",
-    link: "https://github.com/sauravghosal/biary",
-    img: biary,
-    attribution: false,
-    tags: ["React", "JavaScript"],
-  },
-  {
-    name: "Funky Fridge",
-    content: "An Android app to keep track of items in your fridge",
-    link: "https://github.com/funkyFridge",
-    img: funkyFridge,
-    attribution: true,
-    tags: ["Android Studio", "Kotlin"],
   },
 ];
 
 const Projects = () => {
   return (
-    <div className="page project">
-      <div className="project-content">
-        <h1>Projects</h1>
-
-        <PerfectScrollbar
-          className="card-container"
-          options={{ suppressScrollY: true }}
-          component="div"
-        >
+    <div className="min-h-screen my-5">
+      <div className="project-content ">
+        <div className="flex items-center">
+          <h2 className="mr-2">Projects</h2>
+          <hr className="flex-grow" />
+        </div>
+        <div className="grid grid-cols-1 xl:grid-cols-2 gap-2">
           {cards.map((card, i) => {
             return (
               <Card
@@ -64,24 +63,13 @@ const Projects = () => {
                 content={card.content}
                 link={card.link}
                 img={card.img}
-                attribution={card.attribution}
+                award={card.award}
                 tags={card.tags}
               />
             );
           })}
-        </PerfectScrollbar>
+        </div>
       </div>
-
-      <Link
-        to="about"
-        spy={true}
-        smooth={true}
-        duration={500}
-        activeClass="active"
-        className="arrow"
-      >
-        <i class="arrow down"></i>
-      </Link>
     </div>
   );
 };

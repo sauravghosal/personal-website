@@ -1,5 +1,4 @@
 import React from "react";
-import Form from "react-bootstrap/Form";
 import Axios from "axios";
 
 class Contact extends React.Component {

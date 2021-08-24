@@ -1,29 +1,17 @@
 import React from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
 import Hero from "./pages/Hero";
 import Projects from "./pages/Projects";
-import About from "./pages/About";
-import Header from "./components/Header";
-import { Element } from "react-scroll";
 
 function App() {
   return (
-    <React.Fragment>
-      <Header style={{ overflow: "none" }} />
-      <Element id="hero" name="hero">
-        <Hero />
-      </Element>
-
-      <Element id="projects" name="projects">
-        <Projects />
-      </Element>
-      <Element id="about" name="about">
-        <About />
-      </Element>
+    <div className="px-5 sm:px-10 md:px-16 lg:px-36">
+      <Hero />
+      <Projects />
+      {/* <About /> */}
       {/* <Element id="contact" name="contact">
         <Contact />
       </Element> */}
-    </React.Fragment>
+    </div>
   );
 }
 
