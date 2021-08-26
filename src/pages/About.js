@@ -17,7 +17,7 @@ const About = () => {
   return (
     <div className="min-h-screen">
       <div className="flex items-center">
-        <h2 className="mr-2 font-extrabold">About &#38; Contact Me</h2>
+        <h2 className="mr-2 font-extrabold">About Me</h2>
         <hr className="flex-grow" />
       </div>
       <div className="space-y-3">
@@ -66,7 +66,6 @@ const About = () => {
           on. Also, don't hesitate to reach out if you have any questions!
         </p>
       </div>
-      <Footer />
     </div>
   );
 };
