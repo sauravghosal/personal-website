@@ -5,24 +5,13 @@
   "private": true,
   "dependencies": {
     "@craco/craco": "^6.2.0",
-    "axios": "^0.21.1",
-    "cors": "^2.8.5",
-    "express": "^4.17.1",
-    "mdbreact": "^4.27.0",
-    "mongoose": "^5.13.3",
-    "nodemon": "^1.19.3",
-    "pure-react-carousel": "^1.27.6",
     "react": "^17.0.2",
-    "react-axios": "^2.0.5",
     "react-dom": "^16.14.0",
-    "react-headroom": "^3.1.1",
     "react-icons": "^4.2.0",
-    "react-mdl": "^1.11.0",
     "react-perfect-scrollbar": "^1.5.8",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.3",
-    "react-scroll": "^1.8.3",
-    "react-spring": "^8.0.27"
+    "update": "^0.7.4"
   },
   "scripts": {
     "predeploy": "npm run build",
