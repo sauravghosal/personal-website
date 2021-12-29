@@ -1,26 +1,27 @@
 {
   "files": {
-    "main.css": "/personal-website/static/css/main.5473e232.chunk.css",
-    "main.js": "/personal-website/static/js/main.646f5f51.chunk.js",
-    "main.js.map": "/personal-website/static/js/main.646f5f51.chunk.js.map",
+    "main.css": "/personal-website/static/css/main.cdcac4fe.chunk.css",
+    "main.js": "/personal-website/static/js/main.53579f25.chunk.js",
+    "main.js.map": "/personal-website/static/js/main.53579f25.chunk.js.map",
     "runtime-main.js": "/personal-website/static/js/runtime-main.055853b1.js",
     "runtime-main.js.map": "/personal-website/static/js/runtime-main.055853b1.js.map",
-    "static/js/2.3e04c4cc.chunk.js": "/personal-website/static/js/2.3e04c4cc.chunk.js",
-    "static/js/2.3e04c4cc.chunk.js.map": "/personal-website/static/js/2.3e04c4cc.chunk.js.map",
+    "static/js/2.7896930e.chunk.js": "/personal-website/static/js/2.7896930e.chunk.js",
+    "static/js/2.7896930e.chunk.js.map": "/personal-website/static/js/2.7896930e.chunk.js.map",
     "index.html": "/personal-website/index.html",
-    "static/css/main.5473e232.chunk.css.map": "/personal-website/static/css/main.5473e232.chunk.css.map",
-    "static/js/2.3e04c4cc.chunk.js.LICENSE.txt": "/personal-website/static/js/2.3e04c4cc.chunk.js.LICENSE.txt",
+    "static/css/main.cdcac4fe.chunk.css.map": "/personal-website/static/css/main.cdcac4fe.chunk.css.map",
+    "static/js/2.7896930e.chunk.js.LICENSE.txt": "/personal-website/static/js/2.7896930e.chunk.js.LICENSE.txt",
     "static/media/GMTMSports.34996fa5.jpeg": "/personal-website/static/media/GMTMSports.34996fa5.jpeg",
     "static/media/VMAware.66679c3a.svg": "/personal-website/static/media/VMAware.66679c3a.svg",
-    "static/media/avatar.0cbdc70d.jpg": "/personal-website/static/media/avatar.0cbdc70d.jpg",
+    "static/media/avatar.61d70ee7.webp": "/personal-website/static/media/avatar.61d70ee7.webp",
     "static/media/bgc-safety.750aeb2b.png": "/personal-website/static/media/bgc-safety.750aeb2b.png",
+    "static/media/logo.c3bef14d.png": "/personal-website/static/media/logo.c3bef14d.png",
     "static/media/personal-website.450f886c.svg": "/personal-website/static/media/personal-website.450f886c.svg",
-    "static/media/resume.20a15a6f.pdf": "/personal-website/static/media/resume.20a15a6f.pdf"
+    "static/media/resume.818e34e9.pdf": "/personal-website/static/media/resume.818e34e9.pdf"
   },
   "entrypoints": [
     "static/js/runtime-main.055853b1.js",
-    "static/js/2.3e04c4cc.chunk.js",
-    "static/css/main.5473e232.chunk.css",
-    "static/js/main.646f5f51.chunk.js"
+    "static/js/2.7896930e.chunk.js",
+    "static/css/main.cdcac4fe.chunk.css",
+    "static/js/main.53579f25.chunk.js"
   ]
 }
