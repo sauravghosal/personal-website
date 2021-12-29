@@ -1,14 +1,9 @@
 import React from "react";
 import { FaAward } from "react-icons/fa";
 
-const Card = ({ img, name, link, tags, content, award }) => {
+const Card = ({ img, name, tags, content, award }) => {
   return (
-    <a
-      className="no-underline flex flex-col md:flex-row rounded shadow-md transform hover:-translate-y-1 hover:scale-105 opacity-100 hover:bg-gray-100 hover:shadow-2xl duration-500 ease-in-out cursor-pointer"
-      href={link}
-      target="_blank"
-      rel="noopener noreferrer"
-    >
+    <div className="no-underline flex flex-col md:flex-row rounded shadow-md transform hover:-translate-y-1 hover:scale-105 opacity-100 hover:bg-gray-100 hover:shadow-2xl duration-500 ease-in-out cursor-pointer">
       {award && (
         <div className="text-red-500 ml-auto md:absolute right-0 mr-3">
           <FaAward className="inline-block" />
@@ -35,7 +30,7 @@ const Card = ({ img, name, link, tags, content, award }) => {
           })}
         </div>
       </div>
-    </a>
+    </div>
   );
 };
 
