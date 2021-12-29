@@ -11,15 +11,11 @@ import {
   SiStorybook,
   SiVisualstudio,
 } from "react-icons/si";
-import Footer from "../components/Footer";
 
 const About = () => {
   return (
     <div className="min-h-screen">
-      <div className="flex items-center">
-        <h2 className="mr-2 font-extrabold">About Me</h2>
-        <hr className="flex-grow" />
-      </div>
+      <h2 className="mr-2 font-extrabold my-5">About Me</h2>
       <div className="space-y-3">
         <p className="text-lg">
           Hello! My name is Saurav Ghosal, and I'm a fourth year student
@@ -32,7 +28,7 @@ const About = () => {
           Python, JavaScript (React and Node), and TypeScript. I have listed
           below some of the web technologies I'm most familiar with!
         </p>
-        <div className="flex flex-row flex-wrap space-x-3 text-orange-400 opacity-80 md:h-32 mx-auto">
+        <div className="flex flex-row flex-wrap space-x-3 text-orange-400 opacity-80 lg:h-32 mx-auto">
           <SiReact className="h-20 w-auto self-start" />
           <SiNextDotJs className="h-20 w-auto self-end" />
           <SiAmazonaws className="h-20 w-auto self-start" />
