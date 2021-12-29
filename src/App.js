@@ -18,7 +18,7 @@ import Circles from "./components/Circles";
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/personal-website">
       <Header></Header>
       <div
         className="px-10 sm:px-12 md:px-16 lg:px-60 bg-gray-100 overflow-hidden w-full "
