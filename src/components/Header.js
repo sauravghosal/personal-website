@@ -1,78 +1,31 @@
 import React from "react";
-import Scroll from "react-scroll";
 import logo from "../assets/images/logo.png";
-import Headroom from "react-headroom";
-const Link = Scroll.Link;
+import { Link } from "react-router-dom";
+import Resume from "../assets/documents/resume.pdf";
 
 const Header = () => {
   return (
-    <Headroom>
-      <header className="navbar">
-        <div className="logo">
-          <Link
-            to="hero"
-            spy={true}
-            smooth={true}
-            duration={500}
-            activeClass="active"
-            style={{ "&:hover": "cursor" }}
-          >
-            <img src={logo} />
-          </Link>
-        </div>
-        <nav>
-          <ul>
-            <li>
-              <Link
-                to="hero"
-                spy={true}
-                smooth={true}
-                duration={500}
-                className="nav-link"
-                activeClass="active"
-              >
-                Home
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="projects"
-                spy={true}
-                smooth={true}
-                duration={500}
-                className="nav-link"
-                activeClass="active"
-              >
-                Projects
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="about"
-                spy={true}
-                smooth={true}
-                duration={500}
-                className="nav-link"
-                activeClass="active"
-              >
-                About
-              </Link>
-            </li>
+    <header className="flex h-14 justify-between items-center p-3 bg-orange-400 text-white">
+      <Link to="/" className="flex items-center">
+        <img src={logo} className="h-30 w-20 filter drop-shadow-md" />
+      </Link>
+      <nav className="flex space-x-4">
+        <Link to="/">Home</Link>
 
-            <li>
-              <a
-                className="nav-link"
-                activeClass="active"
-                href="../assets/images/avatar.jpg"
-                download="Saurav Ghosal Resume"
-              >
-                Resume
-              </a>
-            </li>
-          </ul>
-        </nav>
-      </header>
-    </Headroom>
+        <Link to="/projects">Projects</Link>
+
+        <Link to="/about">About</Link>
+
+        <a
+          href={Resume}
+          target="_blank"
+          rel="noopener noreferrer"
+          download="Saurav Ghosal Resume"
+        >
+          Resume
+        </a>
+      </nav>
+    </header>
   );
 };
 
