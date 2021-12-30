@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
+import { CgClose } from "react-icons/cg";
 
 const ImageGallery = ({ images }) => {
   const [loading, setLoading] = useState(images.map((_) => true));
@@ -74,6 +75,7 @@ const ImageGallery = ({ images }) => {
                       className="fixed z-50 left-0 top-0 w-full h-full flex items-center p-4 justify-center"
                       style={{ backgroundColor: "rgba(0, 0, 0, 0.8)" }}
                     >
+                      <CgClose className="absolute top-0 right-0 text-white h-5 w-5 mr-2 mt-2 cursor-pointer" />
                       <img
                         ref={imageRef}
                         style={{ maxHeight: "750px" }}
