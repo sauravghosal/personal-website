@@ -11,6 +11,7 @@ import NppTracking from "./assets/images/npp/tracking.png";
 import NppLogo from "./assets/images/npp/logo.png";
 import GhosalReLookahead from "./assets/images/ghosalre/lookahead.png";
 import GhosalReDelta from "./assets/images/ghosalre/deltas.png";
+import GhosalReLogo from "./assets/images/ghosalre/logo.jpeg";
 import ImageGallery from "./components/ImageGallery";
 
 export const projects = [
@@ -193,6 +194,7 @@ export const projects = [
         ]}
       />
     ),
+    img: GhosalReLogo,
     link: "http://ghosalre.com",
     tags: ["Python Flask", "Vue", "Apache", "AWS EC2", "AWS RDS"],
   },
