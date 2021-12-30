@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import { BiArrowBack, BiLinkExternal } from "react-icons/bi";
+import { Link } from "react-router-dom";
 import { projects } from "../constants";
 
 const Project = () => {
@@ -14,13 +16,32 @@ const Project = () => {
   }, [id]);
 
   return (
-    <div>
+    <div className="z-10">
+      <Link
+        className="text-gray-400 flex items-center my-3 hover:cursor hover:text-gray-500"
+        to="/projects"
+      >
+        <BiArrowBack className="mr-1" />
+        Back to Projects
+      </Link>
       {Object.keys(project).length > 0 && (
-        <div className="z-10">
-          <div>{project.content}</div>
+        <div>
           <a href={project.link} target="_blank" rel="noopener noreferrer">
-            Live Website
+            <h2 className="font-bold flex items-center hover:text-gray-800">
+              {project.name} <BiLinkExternal className="mx-2" />
+            </h2>
           </a>
+          <div className="tags">
+            {project.tags.map((tag) => {
+              return (
+                <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
+                  #{tag}
+                </span>
+              );
+            })}
+          </div>
+          <div className="content">{project.content}</div>
+          <div className="screeens">{project.screens}</div>
         </div>
       )}
     </div>
