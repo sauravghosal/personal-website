@@ -7,8 +7,8 @@ import Project from "./Project";
 const Projects = () => {
   const { path, url } = useRouteMatch();
   return (
-    <div className="min-h-screen my-5 z-10">
-      <div className="flex flex-col ">
+    <div className="min-h-screen my-5">
+      <div className="flex flex-col">
         <h2 className="mr-2 font-extrabold">Projects</h2>
 
         <div className="grid grid-cols-1 xl:grid-cols-2 gap-2">
