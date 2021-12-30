@@ -5,7 +5,7 @@ import Resume from "../assets/documents/resume.pdf";
 
 const Header = () => {
   return (
-    <header className="flex h-14 justify-between items-center p-3 bg-orange-400 text-white">
+    <header className="sticky top-0 z-10 flex h-14 justify-between items-center p-3 bg-orange-400 text-white">
       <Link to="/" className="flex items-center">
         <img src={logo} className="h-30 w-20 filter drop-shadow-md" />
       </Link>
