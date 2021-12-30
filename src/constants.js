@@ -33,8 +33,9 @@ export const projects = [
           customers and site admins. I extended upon the company's internal
           tools to track KPIs, such as sign-ups, transactions, and videos
           uploaded. I developed a customer-facing analytics dashboard for both
-          coaches and athletes to track the profile's performance, which was the
-          second-most trafficked page on the site once my internship was over.
+          coaches and athletes to track their profile's performance, which was
+          the second-most trafficked page on the site once my internship came to
+          a close.
         </p>
       </div>
     ),
@@ -59,24 +60,34 @@ export const projects = [
     preview:
       "A hub where VMware employees can check in on the company's progress towards its D&I goals",
     content: (
-      <div>
+      <div className="flex flex-col items-start">
+        <h5 className="font-bold px-2 py-1 bg-blue-300 my-1 text-white">
+          What is VMaware?
+        </h5>
         <p>
           VMAware is a new D&amp;I hub where employees can view live data on the
           company's progress towards its D&amp;I goals each quarter, and provide
           continuous feedback to VMware through sentiment analysis surveys. I
           was a full-stack developer on the hackathon team, primarily working on
-          user authentication with JWTs and Node/Express on the backend and
+          user authentication with JWTs in the Node/Express backend and
           including Tableau dashboard visualizations in the React Bootstrap
-          frontend.{" "}
+          frontend. If you'd like to check our D&amp;I hub out for yourself,
+          please use employee ID <span class="font-bold">397730</span> to log
+          in.
         </p>
+        <h5 className="font-bold px-2 py-1 bg-blue-300 my-1 text-white">
+          What were the next steps?
+        </h5>
         <p>
           Our team placed first in the VMware intern borathon, and leadership
-          was interested in moving forward with our idea, leading us to have
+          was interested in moving forward with our idea, resulting in
           discussions with highly ranked individuals within VMware, like the
           CFO,
           <span class="font-extrabold"> Zane Rowe</span>, for the following
-          months. If you'd like to check our D&amp;I hub out, feel free to use
-          employee ID <span class="font-bold">397730</span> to log in.
+          months. Through the team's discussions with VMware employees, we
+          noticed that many employees found the D&amp;I hub impactful, so much
+          so that more than 40 employees attended the team's Tech Talk
+          presentation in October 2020.
         </p>
       </div>
     ),
@@ -116,7 +127,7 @@ export const projects = [
           connecting students with non-profit groups.
         </p>
         <h5 className="font-bold px-2 py-1 bg-blue-300 my-1 inline-block text-white">
-          What does NPP strive for?
+          What does NPP do?
         </h5>
         <p>
           The National Non-profit portal serves to streamline the process for
@@ -133,7 +144,7 @@ export const projects = [
         <p>
           I worked as a front-end developer on the National Non-profit portal
           development team, completing tasks in 2-week sprint cycles with 3-day
-          code review stages. My major contributions to the project were the
+          code review windows. My major contributions to the project were the
           non-profit project tracking and maintenance pages.
         </p>
       </div>
@@ -163,26 +174,25 @@ export const projects = [
           Ghosal Real Estate (GhosalRE) has been constructing cabins around the
           Sevierville/Pigeon Forge areas in Tennessee. The company is looking to
           expand the number of cabins in the Sevierville area, and construct
-          tiny homes communities in various plots of land around the SouthEast
+          tiny homes communities in various plots of land around the southeast
           United States. For this project, my client was Anjan Ghosal, the head
           of GhosalRE, who wanted a website to view visualized data on his
-          cabins, which could be further expanded to other aspects of the
-          business.
+          cabins, which could be further expanded to other aspects of his real
+          estate business.
         </p>
         <h5 className="font-bold px-2 py-1 bg-blue-300 my-1 inline-block text-white">
           Execution
         </h5>{" "}
         <p>
-          The GhosalRE cabin analytics is a web application that provides
-          multiple views to visualize cabin occupancy data. Mr. Ghosal
-          contracted a software developer to build a cabin web scraper that
-          fetches occupancy data for each of his cabin daily, and I worked on
-          ingesting the scraped data into a relational Postgres database through
-          AWS lambda functions. I set up an Apache web server on an EC2 instance
-          to accept HTTP requests, which is forwarded to a python flask backend
-          through mod_wsgi. The client side was written in JavaScript and Vue
-          CLI, and followed the atomic design principle to ensure modularized
-          components.
+          GhosalRE cabin analytics is a web application that provides multiple
+          views to visualize cabin occupancy data. Mr. Ghosal contracted a
+          software developer to build a cabin web scraper that fetches occupancy
+          data for each of his cabins daily, and I worked on ingesting the
+          scraped data into a relational Postgres database through AWS lambda
+          functions. I set up an Apache web server on an EC2 instance to accept
+          HTTP requests, which is forwarded to a python flask backend through
+          mod_wsgi. The client side was written in JavaScript and Vue CLI, and
+          followed atomic design principles to ensure modularized components.
         </p>
       </div>
     ),
