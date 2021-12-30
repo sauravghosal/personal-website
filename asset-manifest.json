@@ -1,27 +1,36 @@
 {
   "files": {
-    "main.css": "/personal-website/static/css/main.cdcac4fe.chunk.css",
-    "main.js": "/personal-website/static/js/main.79467b02.chunk.js",
-    "main.js.map": "/personal-website/static/js/main.79467b02.chunk.js.map",
+    "main.css": "/personal-website/static/css/main.577de768.chunk.css",
+    "main.js": "/personal-website/static/js/main.c7a08698.chunk.js",
+    "main.js.map": "/personal-website/static/js/main.c7a08698.chunk.js.map",
     "runtime-main.js": "/personal-website/static/js/runtime-main.055853b1.js",
     "runtime-main.js.map": "/personal-website/static/js/runtime-main.055853b1.js.map",
-    "static/js/2.7f099d99.chunk.js": "/personal-website/static/js/2.7f099d99.chunk.js",
-    "static/js/2.7f099d99.chunk.js.map": "/personal-website/static/js/2.7f099d99.chunk.js.map",
+    "static/js/2.b1251056.chunk.js": "/personal-website/static/js/2.b1251056.chunk.js",
+    "static/js/2.b1251056.chunk.js.map": "/personal-website/static/js/2.b1251056.chunk.js.map",
     "index.html": "/personal-website/index.html",
-    "static/css/main.cdcac4fe.chunk.css.map": "/personal-website/static/css/main.cdcac4fe.chunk.css.map",
-    "static/js/2.7f099d99.chunk.js.LICENSE.txt": "/personal-website/static/js/2.7f099d99.chunk.js.LICENSE.txt",
+    "static/css/main.577de768.chunk.css.map": "/personal-website/static/css/main.577de768.chunk.css.map",
+    "static/js/2.b1251056.chunk.js.LICENSE.txt": "/personal-website/static/js/2.b1251056.chunk.js.LICENSE.txt",
     "static/media/GMTMSports.34996fa5.jpeg": "/personal-website/static/media/GMTMSports.34996fa5.jpeg",
-    "static/media/VMAware.66679c3a.svg": "/personal-website/static/media/VMAware.66679c3a.svg",
+    "static/media/analytics.7a5a0de4.webp": "/personal-website/static/media/analytics.7a5a0de4.webp",
     "static/media/avatar.61d70ee7.webp": "/personal-website/static/media/avatar.61d70ee7.webp",
-    "static/media/bgc-safety.750aeb2b.png": "/personal-website/static/media/bgc-safety.750aeb2b.png",
+    "static/media/backoffice.3ffaf8d2.webp": "/personal-website/static/media/backoffice.3ffaf8d2.webp",
+    "static/media/dashboard.27bff22a.png": "/personal-website/static/media/dashboard.27bff22a.png",
+    "static/media/deltas.2e329b8a.png": "/personal-website/static/media/deltas.2e329b8a.png",
+    "static/media/logo.7136d6db.jpeg": "/personal-website/static/media/logo.7136d6db.jpeg",
+    "static/media/logo.ab475a75.png": "/personal-website/static/media/logo.ab475a75.png",
     "static/media/logo.c3bef14d.png": "/personal-website/static/media/logo.c3bef14d.png",
-    "static/media/personal-website.450f886c.svg": "/personal-website/static/media/personal-website.450f886c.svg",
-    "static/media/resume.818e34e9.pdf": "/personal-website/static/media/resume.818e34e9.pdf"
+    "static/media/lookahead.a440269c.png": "/personal-website/static/media/lookahead.a440269c.png",
+    "static/media/maintenance.53c7db4e.png": "/personal-website/static/media/maintenance.53c7db4e.png",
+    "static/media/pods.d1a60e71.png": "/personal-website/static/media/pods.d1a60e71.png",
+    "static/media/profile.46ff468f.png": "/personal-website/static/media/profile.46ff468f.png",
+    "static/media/resume.818e34e9.pdf": "/personal-website/static/media/resume.818e34e9.pdf",
+    "static/media/survey.1b677288.png": "/personal-website/static/media/survey.1b677288.png",
+    "static/media/tracking.361c740a.png": "/personal-website/static/media/tracking.361c740a.png"
   },
   "entrypoints": [
     "static/js/runtime-main.055853b1.js",
-    "static/js/2.7f099d99.chunk.js",
-    "static/css/main.cdcac4fe.chunk.css",
-    "static/js/main.79467b02.chunk.js"
+    "static/js/2.b1251056.chunk.js",
+    "static/css/main.577de768.chunk.css",
+    "static/js/main.c7a08698.chunk.js"
   ]
 }
