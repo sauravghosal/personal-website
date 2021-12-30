@@ -13,7 +13,10 @@ import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
-    <div className="flex flex-col-reverse md:flex-row justify-center md:justify-between items-center mb-10 h-full">
+    <div
+      className="flex flex-col-reverse md:flex-row justify-center md:justify-between items-center mb-10 h-full"
+      style={{ zIndex: 5 }}
+    >
       <div className="space-y-3 bg-white p-5 rounded-lg mr-5">
         <div>
           <p className="font-light">Hi, my name is </p>

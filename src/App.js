@@ -12,7 +12,7 @@ function App() {
     <Router>
       <Header></Header>
       <div
-        className="px-10 sm:px-12 md:px-16 lg:px-60 bg-gray-100 overflow-hidden w-full grid"
+        className="px-10 sm:px-12 md:px-16 lg:px-60 bg-gray-100 overflow-hidden w-full grid relative"
         style={{ minHeight: "calc(100vh - 3.5rem)" }}
       >
         <Switch>
@@ -29,8 +29,8 @@ function App() {
             <Home />
           </Route>
         </Switch>
-        <Circles top={[32, 32]} left={[3, 10]} />
-        <Circles bottom={[0, 0]} right={[10, 10]} />
+        <Circles top={[32, 100]} left={[-100, 100]} />
+        <Circles bottom={[0, 0]} right={[-100, 100]} />
       </div>
     </Router>
   );

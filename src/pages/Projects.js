@@ -7,7 +7,7 @@ import Project from "./Project";
 const Projects = () => {
   const { path, url } = useRouteMatch();
   return (
-    <div className="min-h-screen my-5">
+    <div className="min-h-screen my-5" style={{ zIndex: 5 }}>
       <div className="flex flex-col">
         <h2 className="mr-2 font-extrabold">Projects</h2>
 
