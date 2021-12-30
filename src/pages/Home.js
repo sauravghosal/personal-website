@@ -13,15 +13,15 @@ import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
-    <div className="flex flex-col-reverse md:flex-row justify-center md:justify-between items-center mb-10 h-full z-10">
+    <div className="flex flex-col-reverse md:flex-row justify-center md:justify-between items-center mb-10 h-full">
       <div className="space-y-3 bg-white p-5 rounded-lg mr-5">
         <div>
           <p className="font-light">Hi, my name is </p>
           <h1 className="font-extrabold">Saurav Ghosal.</h1>{" "}
         </div>
         <p className="font-light">
-          I am looking to apply experience with software development to build,
-          test, and design technology that affects change.
+          I am looking to apply my experience with software development to
+          build, test, and design technology that affects change.
         </p>
         <div className="flex space-x-5 text-xl">
           <a
