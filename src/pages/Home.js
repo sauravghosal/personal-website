@@ -9,7 +9,6 @@ import {
   FaTwitter,
 } from "react-icons/fa";
 import Resume from "../assets/documents/resume.pdf";
-import Typical from "react-typical";
 import { Link } from "react-router-dom";
 
 const Home = () => {
