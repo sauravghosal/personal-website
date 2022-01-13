@@ -18,11 +18,29 @@ module.exports = {
         sans: ["Roboto", "sans-serif"],
         heading: ["Open Sans", "sans-serif"],
       },
+      animation: {
+        blob: "blob 7s infinite",
+        fade: "fade ease",
+      },
+      keyframes: {
+        blob: {
+          "0%": { transform: "translate(0px, 0px) scale(1.0)" },
+          "33%": { transform: "translate(20px, -20px) scale(1.1)" },
+          "66%": { transform: "translate(20px, -20px) scale(0.9)" },
+          "100%": { transform: "translate(0x, 0px) scale(1)" },
+        },
+        fade: {
+          "0%": {
+            opacity: 0,
+          },
+          "100%": {
+            opacity: 1,
+          },
+        },
+      },
     },
   },
-  variants: {
-    extend: {},
-  },
+
   plugins: [
     plugin(function ({ addBase, theme }) {
       addBase({
