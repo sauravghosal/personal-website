@@ -1,65 +1,74 @@
 import React from "react";
-import {
-  SiReact,
-  SiNextDotJs,
-  SiAmazonaws,
-  SiTypescript,
-  SiPython,
-  SiJava,
-  SiJavascript,
-  SiNodeDotJs,
-  SiStorybook,
-  SiVisualstudio,
-} from "react-icons/si";
 
 const About = () => {
+  const emojiHexCodes = [
+    "💻",
+    "🪡",
+    "🎶",
+    "🎤",
+    "🌱",
+    "🌈",
+    "🌎",
+    "🎧",
+    "💅🏽",
+    "✨",
+  ];
   return (
     <div className="min-h-screen">
       <h2 className="mr-2 font-extrabold my-5">About Me</h2>
-      <div className="space-y-3">
-        <p className="text-lg">
+      <div className="space-y-3 text-lg">
+        <p>
           Hello! My name is Saurav Ghosal, and I'm a fourth year student
           studying computer science at Georgia Tech.
-          <strong> GO JACKETS! </strong>
         </p>
-        <p className="text-lg">
-          I primarily code in Java. I've taken Object-Oriented Programming in
-          Java, Data Structures, and Algorithms at my university. I also know
-          Python, JavaScript (React and Node), and TypeScript. I have listed
-          below some of the web technologies I'm most familiar with!
+        <p>
+          For a more fun and visual representation of who I am as a person, here
+          are some of my favorite emojis:{" "}
         </p>
-        <div className="flex flex-row flex-wrap space-x-3 text-orange-400 opacity-80 lg:h-32 mx-auto">
-          <SiReact className="h-20 w-auto self-start" />
-          <SiNextDotJs className="h-20 w-auto self-end" />
-          <SiAmazonaws className="h-20 w-auto self-start" />
-          <SiTypescript className="h-20 w-auto self-end" />
-          <SiPython className="h-20 w-auto self-start" />
-          <SiJava className="h-20 w-auto self-end" />
-          <SiJavascript className="h-20 w-auto self-start" />
-          <SiNodeDotJs className="h-20 w-auto self-end" />
-          <SiStorybook className="h-20 w-auto self-start" />
-          <SiVisualstudio className="h-20 w-auto self-end" />
+        <div className="flex flex-wrap">
+          {emojiHexCodes.map((emoji, index) => (
+            <div
+              className={`text-2xl px-2 animate-fade`}
+              style={{ animationDuration: `${index}s` }}
+            >
+              {emoji}
+            </div>
+          ))}
         </div>
-        <p className="text-lg">
+
+        <p>
+          {" "}
+          I have the most classroom experience coding in Java, but recently I've
+          been working a lot with Python Flask on the server-side in my side
+          projects. I've taken Object-Oriented Programming in Java, Data
+          Structures, Algorithms, and a few ML/AI courses at my university. I
+          also have a fair amount of experience developing user interfaces with
+          front end frameworks/libraries like React and Vue!
+        </p>
+        <div className="flex flex-row flex-wrap space-x-3 text-blue-400 opacity-80 mx-auto"></div>
+        <p>
           I'm very interested in the CS for social good space, which I've
-          developed through my involvement with Georgia Tech{" "}
-          <a href="https://bitsofgood.org/" className="font-bold underline">
+          demonstrated through my involvement with Georgia Tech{" "}
+          <a href="https://bitsofgood.org/" className="font-bold">
             Bits of Good
           </a>
-          . As a developer in this organization, I am able to support non-profit
-          groups, like the Boys and Girls Club of Atlanta, GTScheduler, among
-          others, by building web applications to address critical pain points.
-          In my future work, I would like to continue to leverage my technical
-          skills to make social impact.
+          . As a developer in this organization, I can leverage my programming
+          skills to build tech solutions that makes an impact on my community by
+          supporting nonprofits, like the Boys and Girls Club of Atlanta, among
+          others. In my future work, I would like to continue to leverage my
+          technical skills to make social impact.
         </p>
-        <p className="text-lg">
+        <p>
           Aside from programming, I'm very invested in music: I sing in a
-          university-led acapella group, and I play the piano. I enjoy breaking
-          down chord progressions and listening for harmonies.
+          university-led acapella group called Infinite Harmony, and I play the
+          piano. I am currently in a leadership position for the acapella group,
+          which involves lots of time spent arranging and preparing our group's
+          setlist.
         </p>
-        <p className="text-lg">
+        <p>
           Take a look at my previous projects to get an idea of what I've worked
-          on. Also, don't hesitate to reach out if you have any questions!
+          on. Also, don't hesitate to reach out if you have any questions!{" "}
+          {"❤️"}
         </p>
       </div>
     </div>
