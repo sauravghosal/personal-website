@@ -13,11 +13,8 @@ import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
-    <div
-      className="flex flex-col-reverse md:flex-row justify-center md:justify-between items-center mb-10 h-full"
-      style={{ zIndex: 5 }}
-    >
-      <div className="space-y-3 bg-white p-5 rounded-lg mr-5">
+    <div className="flex flex-col-reverse md:flex-row justify-center md:justify-between items-center mb-10 h-full">
+      <div className="space-y-3 bg-white p-5 rounded-lg shadow-md mr-5">
         <div>
           <p className="font-light">Hi, my name is </p>
           <h1 className="font-extrabold">Saurav Ghosal.</h1>{" "}
@@ -73,7 +70,7 @@ const Home = () => {
           href={Resume}
           target="_blank"
           download="Saurav Ghosal Resume"
-          className="inline-block bg-orange-400 hover:bg-orange-500 text-white font-extrabold py-2 px-4 rounded hover:no-underline cursor-pointer m-1"
+          className="inline-block bg-orange-400 hover:bg-orange-500 text-white font-extrabold py-2 px-4 rounded hover:no-underline cursor-pointer mr-1"
         >
           Download My Resume
         </a>

@@ -16,7 +16,7 @@ const Project = () => {
   }, [id]);
 
   return (
-    <div style={{ zIndex: 5 }}>
+    <div>
       <Link
         className="text-gray-400 flex items-center my-3 hover:cursor hover:text-gray-500"
         to="/projects"
