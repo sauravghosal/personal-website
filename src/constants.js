@@ -16,6 +16,53 @@ import ImageGallery from "./components/ImageGallery";
 
 export const projects = [
   {
+    id: 4,
+    name: "GhosalRE Cabin Analytics",
+    preview: "An analytics tool used to report GhosalRE cabin occupancy.",
+    content: (
+      <div className="flex flex-col items-start">
+        <h5 className="font-bold px-2 py-1 bg-blue-300 my-1 inline-block text-white">
+          Motivation
+        </h5>{" "}
+        <p>
+          Ghosal Real Estate (GhosalRE) has been constructing cabins around the
+          Sevierville/Pigeon Forge areas in Tennessee. The company is looking to
+          expand the number of cabins in the Sevierville area, and construct
+          tiny homes communities in various plots of land around the southeast
+          United States. For this project, my client was Anjan Ghosal, the head
+          of GhosalRE, who wanted a website to view visualized data on his
+          cabins, which could be further expanded to other aspects of his real
+          estate business.
+        </p>
+        <h5 className="font-bold px-2 py-1 bg-blue-300 my-1 inline-block text-white">
+          Execution
+        </h5>{" "}
+        <p>
+          GhosalRE cabin analytics is a web application that provides multiple
+          views to visualize cabin occupancy data. Mr. Ghosal contracted a
+          software developer to build a cabin web scraper that fetches occupancy
+          data for each of his cabins daily, and I worked on ingesting the
+          scraped data into a relational Postgres database through AWS lambda
+          functions. I set up an Apache web server on an EC2 instance to accept
+          HTTP requests, which is forwarded to a python flask backend through
+          mod_wsgi. The client side was written in JavaScript and Vue CLI, and
+          followed atomic design principles to ensure modularized components.
+        </p>
+      </div>
+    ),
+    screens: (
+      <ImageGallery
+        images={[
+          { name: "Occupancy Delta", src: GhosalReDelta },
+          { name: "7 Day Occupancy Lookahead", src: GhosalReLookahead },
+        ]}
+      />
+    ),
+    img: GhosalReLogo,
+    link: "http://ghosalre.com",
+    tags: ["Python Flask", "Vue", "Apache", "AWS EC2", "AWS RDS"],
+  },
+  {
     id: 1,
     name: "GMTM Analytics Dashboard ",
     preview:
@@ -69,11 +116,10 @@ export const projects = [
           company's progress towards its D&amp;I goals each quarter, and provide
           continuous feedback to VMware through sentiment analysis surveys. I
           was a full-stack developer on the hackathon team, primarily working on
-          user authentication with JWTs in the Node/Express backend and
-          including Tableau dashboard visualizations in the React Bootstrap
-          frontend. If you'd like to check our D&amp;I hub out for yourself,
-          please use employee ID <span class="font-bold">397730</span> to log
-          in.
+          user authentication with JWTs in the Node/Express backend and the
+          dashboard layout in the React Bootstrap frontend. If you'd like to
+          check our D&amp;I hub out for yourself, please use employee ID{" "}
+          <span class="font-bold">397730</span> to log in.
         </p>
         <h5 className="font-bold px-2 py-1 bg-blue-300 my-1 text-white">
           What were the next steps?
@@ -160,52 +206,5 @@ export const projects = [
       />
     ),
     tags: ["NextJS", "ChakraUI"],
-  },
-  {
-    id: 4,
-    name: "GhosalRE Cabin Analytics",
-    preview: "An analytics tool used to report GhosalRE cabin occupancy.",
-    content: (
-      <div className="flex flex-col items-start">
-        <h5 className="font-bold px-2 py-1 bg-blue-300 my-1 inline-block text-white">
-          Motivation
-        </h5>{" "}
-        <p>
-          Ghosal Real Estate (GhosalRE) has been constructing cabins around the
-          Sevierville/Pigeon Forge areas in Tennessee. The company is looking to
-          expand the number of cabins in the Sevierville area, and construct
-          tiny homes communities in various plots of land around the southeast
-          United States. For this project, my client was Anjan Ghosal, the head
-          of GhosalRE, who wanted a website to view visualized data on his
-          cabins, which could be further expanded to other aspects of his real
-          estate business.
-        </p>
-        <h5 className="font-bold px-2 py-1 bg-blue-300 my-1 inline-block text-white">
-          Execution
-        </h5>{" "}
-        <p>
-          GhosalRE cabin analytics is a web application that provides multiple
-          views to visualize cabin occupancy data. Mr. Ghosal contracted a
-          software developer to build a cabin web scraper that fetches occupancy
-          data for each of his cabins daily, and I worked on ingesting the
-          scraped data into a relational Postgres database through AWS lambda
-          functions. I set up an Apache web server on an EC2 instance to accept
-          HTTP requests, which is forwarded to a python flask backend through
-          mod_wsgi. The client side was written in JavaScript and Vue CLI, and
-          followed atomic design principles to ensure modularized components.
-        </p>
-      </div>
-    ),
-    screens: (
-      <ImageGallery
-        images={[
-          { name: "Occupancy Delta", src: GhosalReDelta },
-          { name: "7 Day Occupancy Lookahead", src: GhosalReLookahead },
-        ]}
-      />
-    ),
-    img: GhosalReLogo,
-    link: "http://ghosalre.com",
-    tags: ["Python Flask", "Vue", "Apache", "AWS EC2", "AWS RDS"],
   },
 ];
