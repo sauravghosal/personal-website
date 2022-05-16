@@ -21,13 +21,13 @@ const Header = () => {
 
   return (
     <header className="sticky h-14 bg-orange-400/90 text-white flex justify-between top-0 z-40 w-full backdrop-blur transition-colors duration-500 lg:z-50 border-b dark:border-slate-50/[0.06] supports-backdrop-blur:bg-white/95 dark:bg-slate-900/75">
-      <Link to="/#" className="flex items-center" smooth>
+      <Link to="/#" className="flex items-center h-30 w-20" smooth>
         <Logo />
       </Link>
       <nav className="flex items-center">
         <FaBars
           onClick={() => setShowNav(!showNav)}
-          className="xs:hidden m-2 cursor-pointer"
+          className="xs:hidden m-2 mr-5 cursor-pointer"
         ></FaBars>
         <div
           id="drawer"
