@@ -1,37 +1,73 @@
-import React from "react";
-import Projects from "./pages/Projects";
-import Project from "./pages/Project";
+import React, { createContext, useState, useEffect } from "react";
 import About from "./pages/About";
-import { HashRouter as Router, Switch, Route } from "react-router-dom";
 import Header from "./components/Header";
-import Circles from "./components/Circles";
 import Home from "./pages/Home";
+import { HashRouter as Router } from "react-router-dom";
+import Project from "./pages/Project";
+import { Route } from "react-router-dom";
+import Footer from "./components/Footer";
+
+export const ThemeContext = createContext();
 
 function App() {
+  const [theme, setTheme] = useState(localStorage.getItem("theme"));
+
+  useEffect(() => {
+    const handleColorScheme = (e) =>
+      e.matches ? setTheme("dark") : setTheme("light");
+    window.matchMedia("(prefers-color-scheme: dark)").addEventListener(
+      "change",
+      handleColorScheme // listener
+    );
+
+    handleColorScheme(window.matchMedia("(prefers-color-scheme: dark)"));
+
+    return () => {
+      window
+        .matchMedia("(prefers-color-scheme: dark)")
+        .removeEventListener(handleColorScheme);
+    };
+  }, []);
+
+  useEffect(() => {
+    if (theme === "dark") {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+  }, [theme]);
+
+  const toggleTheme = () => {
+    if (
+      localStorage.getItem("theme") &&
+      localStorage.getItem("theme") === "dark"
+    ) {
+      localStorage.setItem("theme", "light");
+      setTheme("light");
+    } else {
+      localStorage.setItem("theme", "dark");
+      setTheme("dark");
+    }
+  };
+
   return (
     <Router>
-      <Header></Header>
-      <div
-        className="px-10 sm:px-12 md:px-16 lg:px-60 bg-gray-100 overflow-hidden w-full grid relative"
-        style={{ minHeight: "calc(100vh - 3.5rem)" }}
-      >
-        <Switch>
-          <Route exact path="/projects">
-            <Projects />
+      <ThemeContext.Provider value={{ theme, toggleTheme }}>
+        <div className="dark:bg-slate-900 dark:text-slate-300 transition-colors duration-500">
+          <Route path="/">
+            <Header />
+            <div
+              className="px-5 sm:px-12 md:px-16 lg:px-60 w-full grid relative"
+              style={{ minHeight: "calc(100vh - 3.5rem)" }}
+            >
+              <Home />
+              <Project />
+              <About />
+            </div>
+            <Footer />
           </Route>
-          <Route path={`/about`}>
-            <About />
-          </Route>
-          <Route path={`/projects/:id`}>
-            <Project />
-          </Route>
-          <Route exact path="/">
-            <Home />
-          </Route>
-        </Switch>
-        <Circles top={[32, 100]} left={[-100, 100]} />
-        <Circles bottom={[0, 0]} right={[-100, 100]} />
-      </div>
+        </div>
+      </ThemeContext.Provider>
     </Router>
   );
 }

@@ -1,50 +1,35 @@
-import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
-import { BiArrowBack, BiLinkExternal } from "react-icons/bi";
-import { Link } from "react-router-dom";
+import React from "react";
 import { projects } from "../constants";
+import ScreenCard from "../components/ScreenCard";
 
 const Project = () => {
-  const { id } = useParams();
-  const [project, setProject] = useState({});
-
-  useEffect(() => {
-    let project = projects.filter((project) => project.id === parseInt(id));
-    if (project.length > 0) {
-      setProject(project.pop());
-    }
-  }, [id]);
-
   return (
-    <div>
-      <Link
-        className="text-gray-400 flex items-center my-3 hover:cursor hover:text-gray-500"
-        to="/projects"
-      >
-        <BiArrowBack className="mr-1" />
-        Back to Projects
-      </Link>
-      {Object.keys(project).length > 0 && (
-        <div>
-          <a href={project.link} target="_blank" rel="noopener noreferrer">
-            <h2 className="font-bold flex items-center hover:text-gray-800 my-2">
-              {project.name} <BiLinkExternal className="mx-2" />
-            </h2>
-          </a>
-          <div className="tags">
-            {project.tags.map((tag) => {
-              return (
-                <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
-                  #{tag}
-                </span>
-              );
-            })}
-          </div>
-          <div className="content">{project.content}</div>
-          <div className="screens">{project.screens}</div>
-        </div>
-      )}
-    </div>
+    <section className="relative min-h-screen mx-5 pt-20" id="projects">
+      <h1 className="dark:text-white">My Projects</h1>
+      <div className="space-y-10">
+        <div
+          className="absolute bg-blue-300 dark:bg-blue-100 -left-20 w-10 rounded-md hidden lg:block"
+          style={{ height: "calc(100% - 150px)" }}
+        />
+        {projects.map(
+          ({ name, link, preview, img, award, tags, id, screens }) => {
+            return (
+              <ScreenCard
+                key={id}
+                name={name}
+                link={link}
+                preview={preview}
+                baseUrl={"projects"}
+                img={img}
+                screens={screens}
+                award={award}
+                tags={tags}
+              />
+            );
+          }
+        )}
+      </div>
+    </section>
   );
 };
 

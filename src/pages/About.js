@@ -14,9 +14,9 @@ const About = () => {
     "✨",
   ];
   return (
-    <div className="min-h-screen">
-      <h2 className="mr-2 font-extrabold my-5">About Me</h2>
-      <div className="space-y-3 text-lg">
+    <section className="pt-20 mb-5" id="about">
+      <h1 className="mr-2 font-extrabold my-5">About Me</h1>
+      <div className="space-y-3 text-lg dark:bg-slate-800  border dark:border-slate-300/20 p-5 rounded-md shadow-md">
         <p>
           Hello! My name is Saurav Ghosal, and I'm a fourth year student
           studying computer science at Georgia Tech.
@@ -30,6 +30,7 @@ const About = () => {
             <div
               className={`text-2xl px-2 animate-fade`}
               style={{ animationDuration: `${index}s` }}
+              key={index}
             >
               {emoji}
             </div>
@@ -67,11 +68,10 @@ const About = () => {
         </p>
         <p>
           Take a look at my previous projects to get an idea of what I've worked
-          on. Also, don't hesitate to reach out if you have any questions!{" "}
-          {"❤️"}
+          on. Also, don't hesitate to reach out if you have any questions!
         </p>
       </div>
-    </div>
+    </section>
   );
 };
 

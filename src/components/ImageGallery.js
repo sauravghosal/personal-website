@@ -31,7 +31,7 @@ const ImageGallery = ({ images }) => {
       document.removeEventListener("mousedown", handleClickOutside);
       document.removeEventListener("keydown", handleEscDown);
     };
-  }, [imageRef]);
+  }, [imageRef, images.length]);
 
   const handleImageLoaded = (index) => {
     const newLoading = [...loading];
@@ -53,32 +53,35 @@ const ImageGallery = ({ images }) => {
   };
 
   return (
-    <div class="flex flex-col lg:flex-row flex-wrap m-5">
-      {groupbyTwo(images).map((twoImages) => {
+    <div className="flex flex-col lg:flex-row flex-wrap m-5">
+      {groupbyTwo(images).map((twoImages, outerIndex) => {
         return (
-          <div class="flex flex-col lg:flex-row w-full">
+          <div className="flex flex-col lg:flex-row w-full" key={outerIndex}>
             {twoImages.map(({ src, name }, index) => {
               return (
                 <div
-                  className={`bg-white p-5 pt-3 rounded-lg shadow-md m-3 border-solid border border-gray-200 ${
+                  className={`bg-white dark:bg-slate-700 p-5 pt-3 rounded-lg shadow-md m-3 border-solid border dark:border-slate-300/20 border-gray-200 ${
                     index % 2 && "relative lg:right-14 lg:top-5 shadow-lg"
                   } ${loading.every(Boolean) ? "hidden" : "visible"}`}
+                  key={index}
                 >
-                  <p className="font-bold mb-2">{name}</p>
+                  <p className="font-bold mb-2 dark:text-white">{name}</p>
                   <img
                     src={src}
+                    alt={name}
                     onLoad={() => handleImageLoaded(index)}
                     onClick={() => handleImageClicked(index)}
                   ></img>
                   {index === clicked && (
                     <div
-                      className="fixed z-50 left-0 top-0 w-full h-full flex items-center p-4 justify-center"
+                      className="fixed z-50 left-0 top-0 w-full h-full flex items-center p-4 overflow-auto"
                       style={{ backgroundColor: "rgba(0, 0, 0, 0.8)" }}
                     >
                       <CgClose className="absolute top-0 right-0 text-white h-5 w-5 mr-2 mt-2 cursor-pointer" />
                       <img
                         ref={imageRef}
-                        style={{ maxHeight: "750px" }}
+                        className="max-w-screen-lg w-full p-5 m-auto"
+                        alt={name}
                         src={src}
                         onLoad={() => handleImageLoaded(index)}
                         onClick={() => handleImageClicked(index)}

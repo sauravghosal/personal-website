@@ -18,7 +18,13 @@ const Card = ({ img, name, tags, preview, award, baseUrl, id }) => {
       <div className="flex-grow">
         <div className="px-6 py-4">
           <div className="font-bold text-xl mb-2">{name}</div>
-          <p className="text-gray-700 text-base">{preview} </p>
+          <p className="text-gray-700 text-base">who: {preview?.who} </p>
+          <p className="text-gray-700 text-base">what: {preview?.what} </p>
+          <p className="text-gray-700 text-base">
+            when: {preview?.when?.startDate.toLocaleDateString()} -{" "}
+            {preview?.when?.endDate.toLocaleDateString()}
+          </p>
+          <p className="text-gray-700 text-base">where: {preview?.where} </p>
         </div>
         <div className="px-6 pt-4 pb-2">
           {tags.map((tag) => {

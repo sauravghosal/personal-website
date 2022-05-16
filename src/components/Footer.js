@@ -1,48 +1,65 @@
 import React from "react";
+import {
+  FaEnvelope,
+  FaFacebook,
+  FaGithub,
+  FaLinkedin,
+  FaTwitter,
+} from "react-icons/fa";
 
 function Footer() {
   return (
-    <footer className="footer">
+    <footer className="h-14 flex items-center justify-between border-t text-white p-3 bg-orange-400 dark:border-slate-50/[0.06] supports-backdrop-blur:bg-white/95 dark:bg-slate-900">
       <p>
-        Made by <strong>Saurav Ghosal</strong>
+        Made with {"❤️"} by <strong>Saurav Ghosal</strong>
       </p>
-      <div className="footer-icons">
+      <div className="space-x-2 hidden xs:flex">
         <a
           href="mailto:sghosal9@gatech.edu"
-          alt="GitHub Link"
+          alt="Email"
           target="_blank"
           rel="noopener noreferrer"
-          class="fa fa-envelope"
-        ></a>
+          className="cursor-pointer "
+        >
+          <FaEnvelope className="hover:text-blue-300" />
+        </a>
         <a
           href="https://github.com/sauravghosal"
           alt="GitHub Link"
           target="_blank"
           rel="noopener noreferrer"
-          class="fa fa-github"
-        ></a>
+          className="cursor-pointer"
+        >
+          <FaGithub className="hover:text-blue-300" />
+        </a>
         <a
           href="https://www.facebook.com/saurav.ghosal.796"
           alt="Facebook Link"
           target="_blank"
           rel="noopener noreferrer"
-          class="fa fa-facebook-square"
-        ></a>
+          className="cursor-pointer"
+        >
+          <FaFacebook className="hover:text-blue-300" />
+        </a>
         <a
           href="https://www.linkedin.com/in/saurav-ghosal-b71033171/"
           alt="LinkedIn Link"
           target="_blank"
           rel="noopener noreferrer"
-          class="fa fa-linkedin-square"
-        ></a>
+          className="cursor-pointer"
+        >
+          <FaLinkedin className="hover:text-blue-300" />
+        </a>
 
         <a
           href="https://twitter.com/SauravGhosal3"
           alt="Twitter Link"
           target="_blank"
           rel="noopener noreferrer"
-          class="fa fa-twitter-square"
-        ></a>
+          className="fa fa-twitter-square"
+        >
+          <FaTwitter className="hover:text-blue-300" />
+        </a>
       </div>
     </footer>
   );
