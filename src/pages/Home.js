@@ -8,8 +8,6 @@ import {
   FaFacebook,
   FaLinkedin,
   FaTwitter,
-  FaSun,
-  FaMoon,
 } from "react-icons/fa";
 import Resume from "../assets/documents/resume.pdf";
 import { Parallax, ParallaxProvider } from "react-scroll-parallax";
@@ -128,12 +126,12 @@ const Home = () => {
 
           <div className="inline-flex mx-2 relative">
             <div
-              class="flex items-center cursor-pointer relative mb-4"
+              className="flex items-center cursor-pointer relative mb-4"
               onClick={() => toggleTheme()}
             >
-              <input type="checkbox" class="sr-only" />
+              <input type="checkbox" className="sr-only" />
               <div
-                class={`after:content-[''] after:absolute after:top-0.5 after:left-0.5 after:bg-white after:border after:border-gray-300 after:rounded-full after:h-5 after:w-5 after:transition after:shadow-sm bg-gray-200 border-2 border-gray-200 h-6 w-11 rounded-full ${
+                className={`after:content-[''] after:absolute after:top-0.5 after:left-0.5 after:bg-white after:border after:border-gray-300 after:rounded-full after:h-5 after:w-5 after:transition after:shadow-sm bg-gray-200 border-2 border-gray-200 h-6 w-11 rounded-full ${
                   theme === "dark" &&
                   "after:transform after:translate-x-full after:border-white bg-blue-600 border-blue-600;"
                 }`}
@@ -141,10 +139,10 @@ const Home = () => {
             </div>
             <div
               id="tooltip"
-              class="transition w-36 dark:bg-slate-600/30 dark:border-slate-300/20 absolute -top-10 inline-block z-10 py-2 px-3 text-xs  bg-white rounded-lg border border-gray-200 shadow-sm opacity-100 tooltip"
+              className="transition w-36 dark:bg-slate-600/30 dark:border-slate-300/20 absolute -top-10 hidden xs:inline-block z-10 py-2 px-3 text-xs  bg-white rounded-lg border border-gray-200 shadow-sm opacity-100 tooltip"
             >
               Try switching modes!
-              <div class="tooltip-arrow" data-popper-arrow></div>
+              <div className="tooltip-arrow" data-popper-arrow></div>
             </div>
           </div>
         </div>
