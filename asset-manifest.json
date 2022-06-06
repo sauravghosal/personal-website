@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/personal-website/static/css/main.cb2f749f.css",
-    "main.js": "/personal-website/static/js/main.c9531bab.js",
+    "main.js": "/personal-website/static/js/main.531580b3.js",
     "static/media/dashboard.png": "/personal-website/static/media/dashboard.27bff22afadd93ac69a5.png",
     "static/media/pods.png": "/personal-website/static/media/pods.d1a60e7142cd39cc12d6.png",
     "static/media/survey.png": "/personal-website/static/media/survey.1b6772888d6752c14204.png",
@@ -13,16 +13,16 @@
     "static/media/tracking.png": "/personal-website/static/media/tracking.361c740a55c16969cab7.png",
     "static/media/backoffice.webp": "/personal-website/static/media/backoffice.3ffaf8d2b3fcadcab5f7.webp",
     "static/media/analytics.webp": "/personal-website/static/media/analytics.7a5a0de477b713845b54.webp",
-    "static/media/resume.pdf": "/personal-website/static/media/resume.d2cad12288bc173959f3.pdf",
+    "static/media/resume.pdf": "/personal-website/static/media/resume.6299e154e6a4ee5c0dc6.pdf",
     "static/media/logo.jpeg": "/personal-website/static/media/logo.7136d6db02599a8a9aec.jpeg",
     "static/media/logo.svg": "/personal-website/static/media/logo.aba06cb6738d1f5d8ae83d4d858d874e.svg",
     "static/media/cloud.svg": "/personal-website/static/media/cloud.c7ff059f9113e2da6b0e98ed3572a396.svg",
     "index.html": "/personal-website/index.html",
     "main.cb2f749f.css.map": "/personal-website/static/css/main.cb2f749f.css.map",
-    "main.c9531bab.js.map": "/personal-website/static/js/main.c9531bab.js.map"
+    "main.531580b3.js.map": "/personal-website/static/js/main.531580b3.js.map"
   },
   "entrypoints": [
     "static/css/main.cb2f749f.css",
-    "static/js/main.c9531bab.js"
+    "static/js/main.531580b3.js"
   ]
 }
