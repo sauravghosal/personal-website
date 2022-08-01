@@ -1,5 +1,5 @@
 {
-  "homepage": "http://sauravghosal.github.io/personal-website",
+  "homepage": "http://sauravghosal.github.io",
   "name": "personal-website",
   "version": "0.1.0",
   "private": true,
@@ -9,7 +9,6 @@
     "react-icons": "^4.3.1",
     "react-router-dom": "^5.3.1",
     "react-router-hash-link": "^2.4.3",
-    "react-scripts": "^5.0.1",
     "react-scroll-parallax": "^3.2.0"
   },
   "scripts": {
@@ -39,6 +38,7 @@
     "@tailwindcss/aspect-ratio": "^0.4.0",
     "@tailwindcss/forms": "^0.5.1",
     "@tailwindcss/line-clamp": "^0.4.0",
+    "react-scripts": "^5.0.1",
     "@tailwindcss/typography": "^0.5.2",
     "gh-pages": "^2.2.0"
   }
